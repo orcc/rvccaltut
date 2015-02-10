@@ -1,0 +1,10 @@
+package net.sf.orcc.tutorial.utils;
+
+actor Printer (String name = "") int In  ==> :
+  action In : [a] ==>
+  do
+    print(name);
+    print(": ");
+  	println(a);
+  end
+end

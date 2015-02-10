@@ -1,0 +1,6 @@
+package net.sf.orcc.tutorial.l01SimpleActor;
+
+actor AddSeq () int In1 ==> int Out :
+	action In1: [a, b] ==> Out: [a+b]
+	end
+end

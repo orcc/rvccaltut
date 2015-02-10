@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="Printer">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer"/>
+        </Parameter>
+    </Instance>
+    <Instance id="ID">
+        <Class name="net.sf.orcc.tutorial.l01SimpleActor.ID"/>
+    </Instance>
+    <Instance id="Source">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Add">
+        <Class name="net.sf.orcc.tutorial.l01SimpleActor.Add"/>
+    </Instance>
+    <Instance id="Souce1">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Source2">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Printer1">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer1"/>
+        </Parameter>
+    </Instance>
+    <Instance id="AddSeq">
+        <Class name="net.sf.orcc.tutorial.l01SimpleActor.AddSeq"/>
+    </Instance>
+    <Instance id="Source3">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Printer2">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer2"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Source4">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="AddSubSeq">
+        <Class name="net.sf.orcc.tutorial.l01SimpleActor.AddSubSeq"/>
+    </Instance>
+    <Instance id="Printer3">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer3"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Source5">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Scale">
+        <Class name="net.sf.orcc.tutorial.l01SimpleActor.Scale"/>
+        <Parameter name="k">
+            <Expr kind="Literal" literal-kind="Integer" value="7"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer4">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer4"/>
+        </Parameter>
+    </Instance>
+    <Connection dst="Printer" dst-port="In" src="ID" src-port="Out"/>
+    <Connection dst="ID" dst-port="In" src="Source" src-port="Out"/>
+    <Connection dst="Add" dst-port="In1" src="Souce1" src-port="Out"/>
+    <Connection dst="Add" dst-port="In2" src="Source2" src-port="Out"/>
+    <Connection dst="Printer1" dst-port="In" src="Add" src-port="Out"/>
+    <Connection dst="AddSeq" dst-port="In1" src="Source3" src-port="Out"/>
+    <Connection dst="Printer2" dst-port="In" src="AddSeq" src-port="Out"/>
+    <Connection dst="AddSubSeq" dst-port="In1" src="Source4" src-port="Out"/>
+    <Connection dst="Printer3" dst-port="In" src="AddSubSeq" src-port="Out"/>
+    <Connection dst="Scale" dst-port="In" src="Source5" src-port="Out"/>
+    <Connection dst="Printer4" dst-port="In" src="Scale" src-port="Out"/>
+</XDF>

@@ -1,0 +1,10 @@
+package net.sf.orcc.tutorial.utils;
+
+actor Source (int start = 0, int count = 10) ==> int Out :
+	int i := start;
+	action  ==> Out : [i]
+	guard i < count
+	do
+		i := i + 1;
+	end
+end

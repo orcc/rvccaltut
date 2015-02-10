@@ -1,0 +1,5 @@
+package net.sf.orcc.tutorial.l01SimpleActor;
+
+actor ID () int In ==> int Out :
+  first: action In: [a] ==>  Out: [a] end
+end
