@@ -1,0 +1,27 @@
+package net.sf.orcc.tutorial.l04States;
+
+actor IterSelect () bool S, int A, int B ==> int Out :
+	
+	int state := 0;
+	action S: [sel] ==> guard state = 0
+	do
+		if sel then
+			state := 1;
+		else
+			state := 2;
+		end
+	end
+	
+	action A: [x] ==> Out: [x]
+	guard state = 1
+	do
+		state := 0;
+	end
+	
+	action B: [x] ==> Out: [x]
+	guard state = 2
+	do
+		state := 0;
+	end
+		 
+end

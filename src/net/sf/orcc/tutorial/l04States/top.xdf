@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="Sum">
+        <Class name="net.sf.orcc.tutorial.l04States.Sum"/>
+    </Instance>
+    <Instance id="Source1">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Printer1">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer1"/>
+        </Parameter>
+    </Instance>
+    <Instance id="IterSelect">
+        <Class name="net.sf.orcc.tutorial.l04States.IterSelect"/>
+    </Instance>
+    <Instance id="BoolGen">
+        <Class name="net.sf.orcc.tutorial.utils.BoolGen"/>
+    </Instance>
+    <Instance id="Source2">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="start">
+            <Expr kind="UnaryOp">
+                <Op name="-"/>
+                <Expr kind="Literal" literal-kind="Integer" value="32"/>
+            </Expr>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer2">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer2"/>
+        </Parameter>
+    </Instance>
+    <Instance id="AddOrSub">
+        <Class name="net.sf.orcc.tutorial.l04States.AddOrSub"/>
+    </Instance>
+    <Instance id="Printer3">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer3"/>
+        </Parameter>
+    </Instance>
+    <Connection dst="Sum" dst-port="In" src="Source1" src-port="Out"/>
+    <Connection dst="Printer1" dst-port="In" src="Sum" src-port="Out"/>
+    <Connection dst="IterSelect" dst-port="S" src="BoolGen" src-port="Out"/>
+    <Connection dst="IterSelect" dst-port="B" src="Source2" src-port="Out"/>
+    <Connection dst="IterSelect" dst-port="A" src="Sum" src-port="Out"/>
+    <Connection dst="Printer2" dst-port="In" src="IterSelect" src-port="Out"/>
+    <Connection dst="AddOrSub" dst-port="In" src="IterSelect" src-port="Out"/>
+    <Connection dst="Printer3" dst-port="In" src="AddOrSub" src-port="Out"/>
+</XDF>
