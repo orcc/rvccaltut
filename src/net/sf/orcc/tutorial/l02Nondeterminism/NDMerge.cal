@@ -1,0 +1,6 @@
+package net.sf.orcc.tutorial.l02Nondeterminism;
+
+actor NDMerge () int In1, int In2 ==> int Out :
+	action In1: [x] ==> Out: [x] end
+	action In2: [x] ==> Out: [x] end
+end
