@@ -1,0 +1,17 @@
+package net.sf.orcc.tutorial.utils;
+
+actor BoolGen () ==> bool Out :
+	int count := 0; 	
+	action  ==> Out: [x]
+	var
+		bool x
+	do
+		if( (count mod 2) = 0 )
+		then
+			x := true;
+		else
+			x := false;
+		end
+		count := count + 1;
+	end
+end
