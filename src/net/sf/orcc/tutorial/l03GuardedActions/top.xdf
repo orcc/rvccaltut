@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="Source">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="start">
+            <Expr kind="UnaryOp">
+                <Op name="-"/>
+                <Expr kind="Literal" literal-kind="Integer" value="16"/>
+            </Expr>
+        </Parameter>
+        <Parameter name="count">
+            <Expr kind="Literal" literal-kind="Integer" value="32"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer1">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer1"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer2">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer2"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Split">
+        <Class name="net.sf.orcc.tutorial.l03GuardedActions.Split"/>
+    </Instance>
+    <Instance id="Select">
+        <Class name="net.sf.orcc.tutorial.l03GuardedActions.Select"/>
+    </Instance>
+    <Instance id="Source1">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Source2">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="start">
+            <Expr kind="UnaryOp">
+                <Op name="-"/>
+                <Expr kind="Literal" literal-kind="Integer" value="32"/>
+            </Expr>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer3">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer3"/>
+        </Parameter>
+    </Instance>
+    <Instance id="BoolGen">
+        <Class name="net.sf.orcc.tutorial.utils.BoolGen"/>
+    </Instance>
+    <Connection dst="Split" dst-port="In" src="Source" src-port="Out"/>
+    <Connection dst="Printer1" dst-port="In" src="Split" src-port="P"/>
+    <Connection dst="Printer2" dst-port="In" src="Split" src-port="N"/>
+    <Connection dst="Printer3" dst-port="In" src="Select" src-port="Out"/>
+    <Connection dst="Select" dst-port="S" src="BoolGen" src-port="Out"/>
+    <Connection dst="Select" dst-port="A" src="Source1" src-port="Out"/>
+    <Connection dst="Select" dst-port="B" src="Source2" src-port="Out"/>
+</XDF>

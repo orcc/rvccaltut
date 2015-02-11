@@ -1,0 +1,11 @@
+package net.sf.orcc.tutorial.l03GuardedActions;
+
+actor Select () bool S, int A, int B ==> int Out :
+
+	action S: [sel], A: [x] ==> Out: [x]
+	guard sel end
+	
+	action S: [sel], B: [x] ==> Out: [x]
+	guard not sel end
+
+end

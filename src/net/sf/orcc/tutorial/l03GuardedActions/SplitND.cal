@@ -1,0 +1,11 @@
+package net.sf.orcc.tutorial.l03GuardedActions;
+
+actor SplitND () int In ==> int P, int N :
+	
+	action In: [a] ==> P: [a]
+	guard a >= 0 end
+	
+	action In: [a] ==> N: [a]
+	guard a <= 0 end
+	
+end
