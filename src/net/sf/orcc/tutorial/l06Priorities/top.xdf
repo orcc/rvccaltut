@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="BiasedMerge">
+        <Class name="net.sf.orcc.tutorial.l06Priorities.BiasedMerge"/>
+    </Instance>
+    <Instance id="FairMerge">
+        <Class name="net.sf.orcc.tutorial.l06Priorities.FairMerge"/>
+    </Instance>
+    <Instance id="Source1">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="start">
+            <Expr kind="UnaryOp">
+                <Op name="-"/>
+                <Expr kind="Literal" literal-kind="Integer" value="16"/>
+            </Expr>
+        </Parameter>
+    </Instance>
+    <Instance id="Source2">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Printer1">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer1"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer2">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer2"/>
+        </Parameter>
+    </Instance>
+    <Connection dst="BiasedMerge" dst-port="A" src="Source1" src-port="Out"/>
+    <Connection dst="FairMerge" dst-port="A" src="Source1" src-port="Out"/>
+    <Connection dst="BiasedMerge" dst-port="B" src="Source2" src-port="Out"/>
+    <Connection dst="FairMerge" dst-port="B" src="Source2" src-port="Out"/>
+    <Connection dst="Printer1" dst-port="In" src="BiasedMerge" src-port="Out"/>
+    <Connection dst="Printer2" dst-port="In" src="FairMerge" src-port="Out"/>
+</XDF>

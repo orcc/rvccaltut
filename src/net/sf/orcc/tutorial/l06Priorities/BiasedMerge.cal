@@ -1,0 +1,12 @@
+package net.sf.orcc.tutorial.l06Priorities;
+
+actor BiasedMerge () int A, int B ==> int Out :
+	
+	InA: action A: [x] ==> Out: [x] end
+	InB: action B: [x] ==> Out: [x] end
+	
+	priority
+		InA > InB;
+	end
+	
+end
