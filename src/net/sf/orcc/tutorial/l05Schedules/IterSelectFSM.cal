@@ -1,0 +1,15 @@
+package net.sf.orcc.tutorial.l05Schedules;
+
+actor IterSelectFSM () bool S, int A, int B ==> int Out :
+	readT: action S: [sel] ==> guard sel end
+	readF: action S: [sel] ==> guard not sel end
+	copyA: action A: [x] ==> Out: [x] end
+	copyB: action B: [x] ==> Out: [x] end
+	
+	schedule fsm init :
+		init (readT)  --> waitA;
+		init (readF)  --> waitB;
+		waitA (copyA) --> init;
+		waitB (copyB) --> init;
+	end
+end

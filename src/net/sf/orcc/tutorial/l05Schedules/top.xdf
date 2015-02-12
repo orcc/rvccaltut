@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="Source1">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="BoolGen">
+        <Class name="net.sf.orcc.tutorial.utils.BoolGen"/>
+    </Instance>
+    <Instance id="Source2">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="start">
+            <Expr kind="UnaryOp">
+                <Op name="-"/>
+                <Expr kind="Literal" literal-kind="Integer" value="16"/>
+            </Expr>
+        </Parameter>
+    </Instance>
+    <Instance id="IterSelectFSM">
+        <Class name="net.sf.orcc.tutorial.l05Schedules.IterSelectFSM"/>
+    </Instance>
+    <Instance id="AlmostFairMerge">
+        <Class name="net.sf.orcc.tutorial.l05Schedules.AlmostFairMerge"/>
+    </Instance>
+    <Instance id="AlmostFairMergeFSM">
+        <Class name="net.sf.orcc.tutorial.l05Schedules.AlmostFairMergeFSM"/>
+    </Instance>
+    <Instance id="Printer1">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer1"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer2">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer2"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer3">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer3"/>
+        </Parameter>
+    </Instance>
+    <Connection dst="IterSelectFSM" dst-port="S" src="BoolGen" src-port="Out"/>
+    <Connection dst="IterSelectFSM" dst-port="A" src="Source1" src-port="Out"/>
+    <Connection dst="IterSelectFSM" dst-port="B" src="Source2" src-port="Out"/>
+    <Connection dst="AlmostFairMerge" dst-port="In1" src="Source1" src-port="Out"/>
+    <Connection dst="AlmostFairMerge" dst-port="In2" src="Source2" src-port="Out"/>
+    <Connection dst="AlmostFairMergeFSM" dst-port="In1" src="Source1" src-port="Out"/>
+    <Connection dst="AlmostFairMergeFSM" dst-port="In2" src="Source2" src-port="Out"/>
+    <Connection dst="Printer1" dst-port="In" src="IterSelectFSM" src-port="Out"/>
+    <Connection dst="Printer2" dst-port="In" src="AlmostFairMerge" src-port="Out"/>
+    <Connection dst="Printer3" dst-port="In" src="AlmostFairMergeFSM" src-port="Out"/>
+</XDF>
