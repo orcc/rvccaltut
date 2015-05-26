@@ -1,5 +1,10 @@
-## Lesson 1
-## Simple Actor
+## Lesson 1. Simple Actor
+
+### Creating the project in Eclipse
+
+### Creating new actor
+
+### Creating new network
 
 Simple actor just copy the token from input to output unchanged.
 ```
@@ -8,3 +13,5 @@ actor Add () int In1, int In2 ==> int Out :
 	end
 end
 ```
+
+Litle about the syntax and code formating.
