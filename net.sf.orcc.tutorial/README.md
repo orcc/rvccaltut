@@ -21,8 +21,8 @@ Install plugin. Stable of from nightly builds if you want to run other applicati
 
 ### List of contetns
 1. [Simple actor](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l01SimpleActor)
-2. Nondeterminism
-3. Guarded actions
-4. States
-5. Schedules
-6. Priorities
+2. [Nondeterminism](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l02Nondeterminism)
+3. [Guarded actions](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l03GuardedActions)
+4. [States](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l04States)
+5. [Schedules](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l05Schedules)
+6. [Priorities](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l06Priorities)
