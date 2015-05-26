@@ -6,6 +6,19 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 
 [Open RVC CAL Compiler (ORCC)](http://orcc.sourceforge.net/) is an open-source Integrated Development Environment based on Eclipse and dedicated to dataflow programming. The primary purpose of Orcc is to provide developers with a compiler infrastructure to allow software/hardware code to be generated from dataflow descriptions.
 
+## Installing ORCC
+
+Before you start, you have to install all the tools needed for compiling and running provided examples.
+
+#### Java
+Install Java.
+
+#### Eclipse
+Install Eclipse
+
+#### ORCC plugin for Eclipce
+Install plugin. Stable of from nightly builds if you want to run other applications from [orc-apps](https://github.com/orcc/orc-apps)
+
 ### List of contetns
 1. [Simple actor](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l01SimpleActor)
 2. Nondeterminism
