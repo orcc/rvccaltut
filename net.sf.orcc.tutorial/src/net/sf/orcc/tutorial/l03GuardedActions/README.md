@@ -1,1 +1,1 @@
-# Lesson 4. Guarded actions
+# Lesson 3. Guarded actions
