@@ -7,11 +7,11 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 [Open RVC CAL Compiler (ORCC)](http://orcc.sourceforge.net/) is an open-source Integrated Development Environment based on Eclipse and dedicated to dataflow programming. The primary purpose of Orcc is to provide developers with a compiler infrastructure to allow software/hardware code to be generated from dataflow descriptions.
 
 ## Installing ORCC
-
 Before you start, you have to install all the tools needed for compiling and running provided examples.
+Open RVC CAL Compiler (Orcc) is made for the Eclipse platform. So in order to use it you will need to install Java Runtime Environment and Eclipse IDE.
 
-#### Java
-Install Java.
+#### Java Runtime Environment
+You can download and install the latest JRE release from [java.com](https://java.com/en/download/). ORCC reqires at least version 1.6 of JRE.
 
 #### Eclipse
 Install Eclipse
