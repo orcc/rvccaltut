@@ -20,9 +20,9 @@ Install Eclipse
 Install plugin. Stable of from nightly builds if you want to run other applications from [orc-apps](https://github.com/orcc/orc-apps)
 
 ### List of contetns
-1. [Simple actor](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l01SimpleActor)
-2. [Nondeterminism](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l02Nondeterminism)
-3. [Guarded actions](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l03GuardedActions)
-4. [States](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l04States)
-5. [Schedules](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l05Schedules)
-6. [Priorities](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l06Priorities)
+1. [Simple actor](./src/net/sf/orcc/tutorial/l01SimpleActor)
+2. [Nondeterminism](./src/net/sf/orcc/tutorial/l02Nondeterminism)
+3. [Guarded actions](./src/net/sf/orcc/tutorial/l03GuardedActions)
+4. [States](./src/net/sf/orcc/tutorial/l04States)
+5. [Schedules](./src/net/sf/orcc/tutorial/l05Schedules)
+6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities)
