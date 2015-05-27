@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="Hello">
+        <Class name="net.sf.orcc.tutorial.l00HelloWorld.HelloWorld"/>
+    </Instance>
+</XDF>

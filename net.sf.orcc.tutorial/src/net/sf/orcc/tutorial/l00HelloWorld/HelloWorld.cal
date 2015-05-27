@@ -1,0 +1,8 @@
+package net.sf.orcc.tutorial.l00HelloWorld;
+
+actor HelloWorld () int In ==> :
+	action ==>
+	do
+		print("Hello World!\n");
+	end
+end
