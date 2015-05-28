@@ -23,7 +23,16 @@ To install just extract the archive into a local directory.
 For proper work of the tools you need to configure Eclipse to allocate at least 512MB of memory for the heap. You can do it adding -Xmx512m perameter in the eclipse.ini file.
 
 #### ORCC plugin for Eclipce
-Install plugin. 
+To install Orcc, you can use the Eclipse Software Update Manager. To do that, 
+
+1. Go to Help > Install New Software...
+2. Click Add... to add an update site
+3. Set its name (e.g. Orcc) and its url to http://orcc.sourceforge.net/eclipse
+![Add repository](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/001_Eclipse_Add_repository.png)
+4. Once this done, select Open RVC-CAL Compiler or Orcc.
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/002_Eclipse_Install_plugin.png)
+5. Click Next, check and accept the licenses and then click Finish.
+6. At some point Eclipse will ask you if you really want to install an unverified feature, just accept and restart Eclipse.
 
 ### List of contetns
 0. [Hello World](./src/net/sf/orcc/tutorial/l00HelloWorld). This lesson shows how to compile and run an application.
