@@ -30,7 +30,7 @@ To install Orcc, you can use the Eclipse Software Update Manager. To do that,
 3. Set its name (e.g. Orcc) and its url to http://orcc.sourceforge.net/eclipse
 ![Add repository](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/001_Eclipse_Add_repository.png)
 4. Once this done, select Open RVC-CAL Compiler or Orcc.
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/002_Eclipse_Install_plugin.png)
+![Installing Plugin](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/002_Eclipse_Install_plugin.png)
 5. Click Next, check and accept the licenses and then click Finish.
 6. At some point Eclipse will ask you if you really want to install an unverified feature, just accept and restart Eclipse.
 
