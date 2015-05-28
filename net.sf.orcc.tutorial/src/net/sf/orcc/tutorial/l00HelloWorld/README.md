@@ -1,6 +1,11 @@
 # Lesson 0. Hello world
 
-### Creating project
+### Creating a new project
+First you need to create new ORCC project. 
+
+File > New > Other...
+!()
+
 
 ### Creating Actor
 
