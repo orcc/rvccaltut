@@ -4,7 +4,10 @@
 First you need to create new ORCC project. 
 
 File > New > Other...
-!()
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_01_Create_new_orcc_project.png)
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_02_Create_new_orcc_project.png)
 
 
 ### Creating Actor
