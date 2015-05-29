@@ -20,11 +20,16 @@ Right Click on the src folder in Project Exploer pane. New > Package
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_03_Create_new_package.png)
 
 ### Creating Actor
-In Project exploer pane, select package you just created. Then click menu File > New > File...
+In Project exploer pane, select package you just created. Then click menu "File > New > File..."
+Specify the name and the extention .cal
 
-![]()
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_04_Create_new_actor.png)
+
+After file was created add the following code there.
 
 ```
+package net.sf.orcc.tutorial.l00HelloWorld;
+
 actor HelloWorld () int In ==> :
 	action ==>
 	do
