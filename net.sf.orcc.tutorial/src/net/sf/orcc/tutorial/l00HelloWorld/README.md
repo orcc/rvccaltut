@@ -25,7 +25,7 @@ Specify the name and the extention .cal
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_04_Create_new_actor.png)
 
-After file was created add the following code there.
+After file was created, add the following code there and save it. Eclipse will automatically compile the file.
 
 ```
 package net.sf.orcc.tutorial.l00HelloWorld;
