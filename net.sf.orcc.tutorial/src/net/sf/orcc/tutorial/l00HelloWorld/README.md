@@ -17,7 +17,7 @@ You will see that default src directory has been added to the created project.
 
 Right Click on the src folder in Project Exploer pane. New > Package
 
-![]()
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_03_Create_new_package.png)
 
 ### Creating Actor
 
