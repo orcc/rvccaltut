@@ -37,6 +37,11 @@ actor HelloWorld () int In ==> :
 	end
 end
 ```
+The code above implements the actor named `HelloWorld()` which takes the input stream of tokens of type `int`.
+
+The action within this actor always executes regardless to any input or other conditions and prints the string to the default output.
+
+You will find detailed explanation of the syntax in next lessons.
 
 ### Creating Network
 
