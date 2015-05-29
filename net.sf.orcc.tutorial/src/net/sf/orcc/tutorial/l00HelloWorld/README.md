@@ -20,6 +20,9 @@ Right Click on the src folder in Project Exploer pane. New > Package
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_03_Create_new_package.png)
 
 ### Creating Actor
+In Project exploer pane, select package you just created. Then click menu File > New > File...
+
+![]()
 
 ```
 actor HelloWorld () int In ==> :
