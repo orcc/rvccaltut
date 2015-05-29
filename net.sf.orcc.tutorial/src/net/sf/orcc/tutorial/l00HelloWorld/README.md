@@ -44,7 +44,7 @@ The action within this actor always executes regardless to any input or other co
 You will find detailed explanation of the syntax in next lessons.
 
 ### Creating Network
-RVC CAL is a language wich implements the Dataflow paradigm. This means that in order to run the application you need to build a network of actors. In our case the network will be degenerate.
+RVC CAL is a language wich implements the Dataflow paradigm. This means that in order to run the application you need to build a network of actors. In our case the network will be degenerate and will consist of only one actor.
 
 ### Running simulation
 
