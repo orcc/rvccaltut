@@ -1,14 +1,23 @@
 # Lesson 0. Hello world
 
-### Creating a new project
+### Creating new project
 First you need to create new ORCC project. 
 
-File > New > Other...
+In the menu "File > New > Other..." chose "ORCC > Orcc Project"
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_01_Create_new_orcc_project.png)
 
+Specify the name of the project and click finish.
+
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_02_Create_new_orcc_project.png)
 
+You will see that default src directory has been added to the created project.
+
+### Create new package
+
+Right Click on the src folder in Project Exploer pane. New > Package
+
+![]()
 
 ### Creating Actor
 
