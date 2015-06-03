@@ -80,6 +80,26 @@ Don't forget to save all the files. Compilation will be done automatically.
 
 ### Running simulation
 
+Right-click on the XDF file and (Run As > Orcc simulation).
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_12_Run_simulation.png)
+
+In the "Select simulator" window, click OK.
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_13_Run_simulation.png)
+
+In the "Select input stimulus" window, select a random file (it will not be used by our example).
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_14_Run_simulation.png)
+
+In the Run configuration wizard just click on Run.
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_15_Run_simulation.png)
+
+You should see that in Eclipse's console:
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_16_Run_simulation.png)
+
 
 ---
 [Main page](../../../../../../) | [Next lesson](../l01SimpleActor)
