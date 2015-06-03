@@ -52,6 +52,8 @@ To build a network you need to create new XDF file. Go to  File > New > Other th
 
 After empty XDF was created you have to add an instance of an actor.
 
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_07_Create_new_XDF.png)
+
 n empty XDF file will open. Click first on (Objects > Instance) in the palette, and then click on XDF file area to add an Instance in your network.
 
 Name your instance "HelloInstance" to obtain this result:
