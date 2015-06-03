@@ -46,6 +46,21 @@ You will find detailed explanation of the syntax in next lessons.
 ### Creating Network
 RVC CAL is a language wich implements the Dataflow paradigm. This means that in order to run the application you need to build a network of actors. In our case the network will be degenerate and will consist of only one actor.
 
+To build a network you need to create new XDF file. Go to  File > New > Other then select Orcc > XDF Network.
+
+pic pic
+
+After empty XDF was created you have to add an instance of an actor.
+
+n empty XDF file will open. Click first on (Objects > Instance) in the palette, and then click on XDF file area to add an Instance in your network.
+
+Name your instance "HelloInstance" to obtain this result:
+
+Now, you have to link this instance to the actor you have created before. To do so, right-click on the instance and select Set/Update Refinement. Then, select the "Hello" actor in the newly opended box:
+
+After your validation, "HelloInstance" should be displayed in blue (meaning that your instance is assigned to an actor). ~~This very simple instance does not contain any input or ouput port. Don't worry, this is normal: the Hello actor doesn't defines any port.~~
+
+
 ### Running simulation
 
 
