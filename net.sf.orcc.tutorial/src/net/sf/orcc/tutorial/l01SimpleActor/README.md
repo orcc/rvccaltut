@@ -25,7 +25,7 @@ end
 In the first line we specify the pakage.
 
 The main entity in RVC CAL is an actor. In the example above you see that to describe an actor one should use keyword ```actor``` followed by the name of the actor and paremeters in parentheses (empty in this example).
-Then you specify input ports before the sign ```==>```, and output ports after this sign. RVC CAL is a statically typed language, so you need explicitely define type for each variable, i.e. in the line ```actor ID () int In ==> int Out :``` ports ```In``` and ```Out``` both are of type ```Int```.
+Then you specify input ports before the sign ```==>```, and output ports after this sign. RVC CAL is a statically typed language, so you need explicitely define type for each variable, i.e. in the line ```actor ID () int In ==> int Out :``` ports ```In``` and ```Out``` both are of type ```int```.
 The colon at the end of the line marks the start of the actor body which is bounded by the keyword  ```end``` from the other side.
 
 Inside the body each actor has one or more actions. 
