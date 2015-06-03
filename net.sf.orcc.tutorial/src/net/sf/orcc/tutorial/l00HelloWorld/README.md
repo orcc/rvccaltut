@@ -54,13 +54,26 @@ After empty XDF was created you have to add an instance of an actor.
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_07_Create_new_XDF.png)
 
-n empty XDF file will open. Click first on (Objects > Instance) in the palette, and then click on XDF file area to add an Instance in your network.
+Click on Objects > Instance in the palette, and then click on XDF file area to add an Instance to your network.
 
-Name your instance "HelloInstance" to obtain this result:
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_08_Create_instance.png)
 
-Now, you have to link this instance to the actor you have created before. To do so, right-click on the instance and select Set/Update Refinement. Then, select the "Hello" actor in the newly opended box:
+Name your instance "Hello"
 
-After your validation, "HelloInstance" should be displayed in blue (meaning that your instance is assigned to an actor). ~~This very simple instance does not contain any input or ouput port. Don't worry, this is normal: the Hello actor doesn't defines any port.~~
+Now you have to link this instance to the actor created before. Right-click on the instance and select Set/Update Refinement.
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_09_Link_actor.png)
+
+Then, select the "HelloWorld" actor in the newly opended box.
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_10_Link_actor.png)
+
+
+After your validation, "Hello" should be displayed in blue (meaning that your instance is assigned to an actor).
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_11_Network_ready.png)
+
+As you can see our instance has an input port, even thought we did not specify it. This is normal.
 
 
 ### Running simulation
