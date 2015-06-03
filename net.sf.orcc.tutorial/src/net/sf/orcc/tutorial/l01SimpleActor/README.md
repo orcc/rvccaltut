@@ -1,16 +1,17 @@
 ## Lesson 1. Simple Actor
 
-### Creating the project in Eclipse
+Creating new package
 
-### Creating new actor
+Creating new actor
 
-### Creating new network
+Creating new network
 
 Simple actor just copy the token from input to output unchanged.
 ```
-actor Add () int In1, int In2 ==> int Out :
-	action In1: [a], In2: [b] ==> Out: [a+b]
-	end
+package net.sf.orcc.tutorial.l01SimpleActor;
+
+actor ID () int In ==> int Out :
+  first: action In: [a] ==>  Out: [a] end
 end
 ```
 
