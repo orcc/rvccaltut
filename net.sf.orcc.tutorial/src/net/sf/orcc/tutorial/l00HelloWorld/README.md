@@ -75,6 +75,8 @@ After your validation, "Hello" should be displayed in blue (meaning that your in
 
 As you can see our instance has an input port, even thought we did not specify it. This is normal.
 
+Don't forget to save all the files. Compilation will be done automatically.
+
 
 ### Running simulation
 
