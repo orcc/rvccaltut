@@ -48,7 +48,7 @@ RVC CAL is a language wich implements the Dataflow paradigm. This means that in 
 
 To build a network you need to create new XDF file. Go to  File > New > Other then select Orcc > XDF Network.
 
-pic pic
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_05_Create_new_XDF.png) ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_06_Create_new_XDF.png)
 
 After empty XDF was created you have to add an instance of an actor.
 
