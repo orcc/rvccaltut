@@ -117,6 +117,7 @@ actor Scale (int k = 1) int In ==> int Out :
 	end
 end
 ```
+You can notice that here we did not left the actor's parameters field empty. ```int k = 1``` introduce the parameter ```k``` which has the default value of ```1```.
 
 After you finish all the examples above you can build a network similar to the shown on the following picture.
 
