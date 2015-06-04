@@ -133,7 +133,7 @@ In the properties pane click on the *Arguments* on the left. You will see the li
 
 Now when you run the network this particular instance of the actor will multiply the input token by 7.
 
->Hint: You can specify paramenters for ```Source``` and ```Printer``` actors, which dowload them from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils).
+>Hint: You can specify paramenters for ```Source``` and ```Printer``` actors, which dowloaded from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) in the begining of the lesson.
 
 #### Network of simple actors
 
