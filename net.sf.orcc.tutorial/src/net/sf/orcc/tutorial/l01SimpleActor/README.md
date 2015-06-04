@@ -12,7 +12,7 @@ the actor:
 
 Describing an actor involves describing its interface to the outside, the ports, the structure of its internal state, as well as the steps it can perform, what these steps do (in terms of token production and consumption, and the update of the actor state), and how to pick the step that the actor will perform next.
 
-#### A simple actor
+#### The simpliest actor
 
 The simpliest actor just copies a token from the input to the output unchanged.
 ```
@@ -68,4 +68,51 @@ Hint: You can just drug-and-drop actor file from Project explorer pane to the XD
 Now you can run example as was described in the previous lesson and see the result in the console.
 
 ![image](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_01_ID_actor.png)
+
+#### Other simple actors
+
+
+##### Add
+
+```
+package net.sf.orcc.tutorial.l01SimpleActor;
+
+actor Add () int In1, int In2 ==> int Out :
+	action In1: [a], In2: [b] ==> Out: [a+b]
+	end
+end
+```
+
+##### AddSeq
+
+```
+package net.sf.orcc.tutorial.l01SimpleActor;
+
+actor AddSeq () int In1 ==> int Out :
+	action In1: [a, b] ==> Out: [a+b]
+	end
+end
+```
+
+##### AddSubSeq
+
+```
+package net.sf.orcc.tutorial.l01SimpleActor;
+
+actor AddSubSeq () int In1 ==> int Out :
+	action In1: [a, b] ==> Out: [a+b,a-b]
+	end
+end
+```
+
+##### Scale
+
+```
+package net.sf.orcc.tutorial.l01SimpleActor;
+
+actor Scale (int k = 1) int In ==> int Out :
+	action In: [a] ==> Out: [k*a]
+	end
+end
+```
 
