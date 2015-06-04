@@ -116,3 +116,4 @@ actor Scale (int k = 1) int In ==> int Out :
 end
 ```
 
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_02_Simple_actors.png)
