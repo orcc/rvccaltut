@@ -65,9 +65,7 @@ After you add instances of actors: ```ID```, ```Source``` and ```Printer```. Con
 
 Hint: You can just drug-and-drop actor file from Project explorer pane to the XDF netwok diagram to add an instance of actor.
 
-![image]()
-
 Now you can run example as was described in the previous lesson and see the result in the console.
 
-![image]()
+![image](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_01_ID_actor.png)
 
