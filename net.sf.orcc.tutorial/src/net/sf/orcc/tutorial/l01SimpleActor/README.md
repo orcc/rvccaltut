@@ -47,10 +47,27 @@ It is important to understand the difference between *input pettern* and *output
 
 In the previously created project create new package net.sf.orcc.tutorial.l01SimpleActor
 
-Create new CAL file named ID.cal
+Create new CAL file named ID.cal and copy the following code there.
+```
+package net.sf.orcc.tutorial.l01SimpleActor;
 
-Creating utilities: ```Source``` and ```Printer```.
+actor ID () int In ==> int Out :
+  first: action In: [a] ==>  Out: [a] end
+end
+```
 
-Creating new network
+In order to build working network we will need several additional actors to produce data and print results to the console.
+For this example we will use ```Source``` and ```Printer``` actors as utilities. You can just dowload them from the [Github repo](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) and add to your project.
 
+Now you can create the network just following the steps from previous lesson [Hello world](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l00HelloWorld).
+
+After you add instances of actors: ```ID```, ```Source``` and ```Printer```. Connect ```Source``` output to ```ID``` input, and ```ID``` output to ```Printer ``` input.
+
+Hint: You can just drug-and-drop actor file from Project explorer pane to the XDF netwok diagram to add an instance of actor.
+
+![image]()
+
+Now you can run example as was described in the previous lesson and see the result in the console.
+
+![image]()
 
