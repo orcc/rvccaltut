@@ -63,7 +63,7 @@ Now you can create the network just following the steps from previous lesson [He
 
 After you add instances of actors: ```ID```, ```Source``` and ```Printer```. Connect ```Source``` output to ```ID``` input, and ```ID``` output to ```Printer ``` input.
 
-Hint: You can just drug-and-drop actor file from Project explorer pane to the XDF netwok diagram to add an instance of actor.
+>Hint: You can just drug-and-drop actor file from Project explorer pane to the XDF netwok diagram to add an instance of actor.
 
 Now you can run example as was described in the previous lesson and see the result in the console.
 
