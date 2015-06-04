@@ -1,6 +1,6 @@
 # Lesson 2. Nondeterminism
 
-As was mentioned in previous lesson, actors may have multiple actions.
+As was mentioned in previous lesson, actors may have multiple actions. So in the following example there are two.
 
 ```
 package net.sf.orcc.tutorial.l02Nondeterminism;
@@ -10,6 +10,9 @@ actor NDMerge () int In1, int In2 ==> int Out :
 	action In2: [x] ==> Out: [x] end
 end
 ```
+This actor merges two input streams into one output. However, from the description we cannot know how actor will behave if there are valid tokens on both input ports at the same time. The order of output tokens will be undefined. This behavior is called *nondeterministic*.
+
+
 
 
 ```
