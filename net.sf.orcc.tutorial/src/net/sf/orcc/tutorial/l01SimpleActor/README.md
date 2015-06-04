@@ -120,9 +120,13 @@ end
 You can notice that here we did not left the actor's parameters field empty. ```int k = 1``` introduce the parameter ```k``` which has the default value of ```1```.
 
 You can modify the parameters after you added an instance of actor to the XDF network. To do that you have to right-click on the instance rectangle and then chose *Show properties* item.
-![]()
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_03_Actorparameters.png)
+
 In the properties pane click on the *Arguments* on the left. You will see the list of arguments. Click on *Add* button and specify *Name* ```k``` and *Value* ```7```.
-![]()
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_04_Actor_parameners.png)
+
 Now when you run the network this particular instance of the actor will multiply the input token by 7.
 
 >Hint: You can specify paramenters for ```Source``` and ```Printer``` actors, which dowload them from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils).
