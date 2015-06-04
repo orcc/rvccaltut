@@ -28,10 +28,13 @@ The main entity in RVC CAL is an actor. In the example above you see that to des
 Then you specify input ports before the sign ```==>```, and output ports after this sign. RVC CAL is a statically typed language, so you need explicitely define type for each variable, i.e. in the line ```actor ID () int In ==> int Out :``` ports ```In``` and ```Out``` both are of type ```int```.
 The colon at the end of the line marks the start of the actor body which is bounded by the keyword  ```end``` from the other side.
 
-Inside of the body each actor has one or more actions.
-Action.
-Input pattern.
+Inside of the body each actor has one or more actions, which execute (fire) as one step each. Actions may (or may not) consume input tokens and produce output tokens at eech step.
+Syntax of desctibing an action in RVC CAL is following: ```first: ``` is an *optional* identifier of an action, which can be ommited. After keyword ```action``` and in front of ```==>``` sign you see the *input pattern*.
+
+*Input pattern* specifies how many tokens to consume from which ports and how to call these tokens in the rest of the action. The input pattern in ```ID``` actor is ```In: [a]```. It tells the action to consume one tocken from input ```In``` and name it ```a``` within the action body. *Input pattern* of action realize the idea of [pattern matching](http://en.wikipedia.org/wiki/Pattern_matching).
+
 Output expressions.
+
 Difference between *input pettern* and *output expression*.
 
 #### Running the examples
