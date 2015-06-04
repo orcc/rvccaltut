@@ -41,7 +41,7 @@ end
 
 The expression following ```==>``` sign is an *output expression*. It defines the number and values of output tokens which will be produced on each output port by each *firing* of the action. In this example ```Out: [a]``` is an *output expression*. It defines that exactly one token will be pruduced on output port ```Out```, and the value of that token will be ```a```.
 
-It is important to understand the difference between *input pettern* and *output expression*. 
+It is important to understand the difference between *input pettern* and *output expression*.  In the input pattern the local variable ```a``` is daclared and assigned with the value of input token whenever action has just fired. The output expression uses that variable and send the value of ```a``` as a produced token to the output port at the end of the action firing.
 
 #### Running the examples
 
