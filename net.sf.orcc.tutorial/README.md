@@ -13,9 +13,9 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 
 [Hello World](./src/net/sf/orcc/tutorial/l00HelloWorld). This lesson shows how to compile and run an application.
 
-1. [Simple actor](./src/net/sf/orcc/tutorial/l01SimpleActor). The simplest language constructions which follow the dataflow model is intoduced.
+1. [Simple actor](./src/net/sf/orcc/tutorial/l01SimpleActor). The simplest language constructions which follow the dataflow model are intoduced.
 2. [Nondeterminism](./src/net/sf/orcc/tutorial/l02Nondeterminism). Nondeterministic nature of unconstrained multiple actions of the same actor is explained.
 3. [Guarded actions](./src/net/sf/orcc/tutorial/l03GuardedActions). The way to restrict actions executions with conditions is introduced. 
-4. [States](./src/net/sf/orcc/tutorial/l04States). The memory (or States) of actors which can affect the consequent executions is introduced.
+4. [States](./src/net/sf/orcc/tutorial/l04States). The memory (or *states*) of actors which can affect the consequent executions is introduced.
 5. [Schedules](./src/net/sf/orcc/tutorial/l05Schedules). Schedules is a convienient way to implement finite state machines.
 6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities). 
