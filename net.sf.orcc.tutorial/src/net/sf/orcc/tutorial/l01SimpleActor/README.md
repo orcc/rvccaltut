@@ -73,7 +73,7 @@ Now you can run example as was described in the previous lesson and see the resu
 
 
 ##### Add
-
+The next example shows how to make an actor which will be as simple as ```ID``` but at the same time will perform a real manipulation on the data
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -82,9 +82,10 @@ actor Add () int In1, int In2 ==> int Out :
 	end
 end
 ```
+We have now two *input ports* seperated by comma ```int In1, int In2``` in the daclaration of actor. Also *input pattern* changed to ```In1: [a], In2: [b]``` which means that action will *fire* only in case when both ports ```In1``` and ```In2``` will have a valid data on their inputs. Consumed toklens than will be assigned to ```a```and ```b``` respectively. Moreover, this example clarify the differens between input pattern and output expression. Looking at ```Out: [a+b]``` you can see that output expression includes real expression (sum of two variable), which will be calculated after action is finished; and result will be sent to the output port.
 
 ##### AddSeq
-
+Previous example cunsume two tokens from to input ports, but what happens if we have only one input port. Can we still add tow values? The following example provides the solution.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -93,9 +94,10 @@ actor AddSeq () int In1 ==> int Out :
 	end
 end
 ```
+As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input by each firing. It also can put more than two tokens separated by come in the input pattern.
 
 ##### AddSubSeq
-
+The output expression as illustrated in this example can also produce more than one token. You have just to wite these expressions separated by coma within square brackets.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -106,7 +108,7 @@ end
 ```
 
 ##### Scale
-
+Following example show another operation which can be performed by output expression.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -116,4 +118,8 @@ actor Scale (int k = 1) int In ==> int Out :
 end
 ```
 
+After you finish all the examples above you can build a network similar to the shown on the following picture.
+
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_02_Simple_actors.png)
+
+
