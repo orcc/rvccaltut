@@ -119,6 +119,8 @@ end
 ```
 You can notice that here we did not left the actor's parameters field empty. ```int k = 1``` introduce the parameter ```k``` which has the default value of ```1```.
 
+#### Network of simple actors
+
 After you finish all the examples above you can build a network similar to the shown on the following picture.
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_02_Simple_actors.png)
