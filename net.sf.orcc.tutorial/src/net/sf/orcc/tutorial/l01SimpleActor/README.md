@@ -57,7 +57,11 @@ end
 ```
 
 In order to build working network we will need several additional actors to produce data and print results to the console.
-For this example we will use ```Source``` and ```Printer``` actors as utilities. You can just dowload them from the [Github repo](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) and add to your project.
+For this example we will use ```Source``` and ```Printer``` actors as utilities. You can just dowload them from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) and add to your project.
+
+>  ```Source``` actor is just a counter wich produces a continious sequence of nambers. You can also specify parameters for starting number (default is 1) and the counter upper bound (default is 10). To know how to do that see section *Other simple actors > Scale*
+
+> ```Printer``` prints all the consumed tokens to the console. You can specify the name for each instatce. That would be really usefull if you have several of them printing to the same console simultaniously.
 
 Now you can create the network just following the steps from previous lesson [Hello world](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l00HelloWorld).
 
@@ -94,7 +98,7 @@ actor AddSeq () int In1 ==> int Out :
 	end
 end
 ```
-As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input by each firing. It also can put more than two tokens separated by come in the input pattern.
+As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input during one firing. You also can put more than two tokens separated by come in the input pattern.
 
 ##### AddSubSeq
 The output expression as illustrated in this example can also produce more than one token. You have just to wite these expressions separated by coma within square brackets.
