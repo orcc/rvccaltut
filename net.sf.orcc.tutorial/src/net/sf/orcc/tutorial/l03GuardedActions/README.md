@@ -72,3 +72,8 @@ actor Select () bool S, int A, int B ==> int Out :
 
 end
 ```
+
+Now you can try to buid network like the following. For the boolen input of the actor from the last example you will need special source generator BoolGen. You can download it wrom Github repository [here](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils/BoolGen.cal). ```BoolGen``` actor generates an infinite sequence of ```[true, false, true, false,...]```.
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/03_01_Network.png)
+
