@@ -12,9 +12,9 @@ end
 ```
 This actor merges two input streams into one output. The first action takes a token from the input ```In1``` and sends it to the output ```Out```. The second one does the same but for the input ```In2```. However, from the description we cannot know how actor will behave if there are tokens available on both input ports at the same time. The order of output tokens will be undefined. This behavior is called *nondeterministic*.
 
-Generally, nondeterminism means that the programm can produce different output processing the same input data. But in case of ```NDMerge``` the output is actually defined by the timings of the input streams. So fist came --- first go. And the ability to leave this choise open was added to the CAL language on purpose. For example, if there is no available data on the first stream, and there are data on the second stream, actor does not have to wait. It will send further the token from the stream whichever will have it first. And if we know the timings of the input data, this actually will help to avoid stalls and unnecesary delays.
+Generally, nondeterminism means that the programm can produce different output while processing the same input data. But in case of ```NDMerge``` the output is actually defined by the timings of the input streams. The ability to leave this choise open was added to the CAL language on purpose. For example, if there is no available data on the first stream, and there are data on the second stream, actor does not have to wait. It will send further the token from the input whichever will have it first. And if we know the timings of the input data, this actually will help to avoid stalls and unnecesary delays.
 
-Hoever we can make an actor wich will be really nondeterministic even if we know the timings of input data. The following example of ```NDSplit``` shows it. 
+Hoever, we can make an actor wich will be really nondeterministic even if we know the timings of input data. The following example of ```NDSplit``` shows it. 
 
 ```
 package net.sf.orcc.tutorial.l02Nondeterminism;
