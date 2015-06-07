@@ -22,3 +22,9 @@ actor NDSplit () int In1 ==> int Out1, int Out2 :
 	action In1: [x] ==> Out2: [x] end
 end
 ```
+
+
+You can try to build the network similar to the following one to simulate the nondetermistic behavior. Whilst, because of deterministic nature of simulator algorithms results will not look random.
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/02_01_Network.png)
+
