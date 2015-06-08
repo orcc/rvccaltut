@@ -16,21 +16,12 @@ actor Sum () int In ==> int Out :
 	end
 end
 ```
-In line ```int sum := 0;``` we declare state variable ```sum``` and initialize it with zero. In this example you can also nitice that action can manipulate data within its body. In this case the code between ```do``` and ```end``` just adds input token to the state variable ```sum```.
+In line ```int sum := 0;``` we declare state variable ```sum``` and initialize it with zero. In this example you can also nitice that action can manipulate data within its body. In this case the code between ```do``` and ```end``` updates the state variable ```sum``` adding consumed token to it. Construction like that are usually accumulators. So here you can see that action not only cunsume input token and produce output, it also modifies internal state of the actor, which will affect the output of the next firing.
+
+It is important to notice here (even thought it was mentioned in previous lessons) that the *output expression is evaluated after the action firing*. The value of ```sum``` in output expression ```Out: [sum]``` is the one which has been already updated by the action.
 
 
-```
-package net.sf.orcc.tutorial.l04States;
 
-actor SumOld () int In ==> int Out :
-	int sum := 0;
-	//action In: [a] ==> Out: [old sum] // NOT implemented in RVC Cal
-	action In: [a] ==> Out: [sum]
-	do
-		sum := sum + a;
-	end
-end
-```
 
 ```
 package net.sf.orcc.tutorial.l04States;
