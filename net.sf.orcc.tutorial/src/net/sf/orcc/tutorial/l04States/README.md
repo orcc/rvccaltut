@@ -57,8 +57,9 @@ The first action consume token from the input ```S``` and does not produce any o
 
 The second action changes ```state```to zero and copyies a token from input ```A``` to the output but only fires when  internal state variable ```state``` *current* value is ```1```. The third action do the same but only when ```state``` value is 2.
 
+Note that ```Select``` and ```IterSelect``` are almost, but not entirely, equivalent. First of all, ```IterSelect``` makes twice as many steps in order to process the same number of tokens. Secondly, it actually reads, and therefore consumes, the S input token, irrespective of whether a matching data token is available on A or B. And unlike the previous examples, the ```IterSelect``` actor uses guards that depend on an actor state variable rather than on an input token.
 
-
+It is possible to use combinations of state variables and input tokens in guards, which is illustrated in the following example.
 ```
 package net.sf.orcc.tutorial.l04States;
 
@@ -80,5 +81,8 @@ actor AddOrSub () int In ==> int Out :
 
 end
 ```
+Here we have to actions. One of them adds input token to the state variable ```sum``` and another substracts the input token from it depending on whether the token is less or not less then the value of ```sum``` itself.
+
+You can build the network similar to the following diagram to experiment with these actors.
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/04_01_Network.png)
