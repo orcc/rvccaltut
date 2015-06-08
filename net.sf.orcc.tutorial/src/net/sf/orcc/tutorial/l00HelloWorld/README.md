@@ -101,5 +101,4 @@ You should see that in Eclipse's console:
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_16_Run_simulation.png)
 
 
----
-[Main page](../../../../../../) | [Next lesson](../l01SimpleActor)
+
