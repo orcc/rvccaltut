@@ -1,4 +1,4 @@
-# Lesson 2. Nondeterminism
+# Lesson 2. Non-determinism
 
 As was mentioned in previous lesson, actors may have multiple actions. So in the following example there are two.
 
