@@ -9,7 +9,7 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 
 ### List of contents
 
-[Installing ORCC Tools](#lesson-installing-orcc-tools). Here you will find where to get and how to install the latest ORCC.
+[Installing ORCC Tools](#installing-orcc-tools). Here you will find where to get and how to install the latest ORCC.
 
 [Hello world](#lesson-0-hello-world). This lesson shows how to compile and run an application.
 
