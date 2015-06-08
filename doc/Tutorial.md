@@ -9,19 +9,19 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 
 ### List of contents
 
-[Installing ORCC Tools](./Installing_ORCC.md). Here you will find where to get and how to install the latest ORCC.
+[Installing ORCC Tools](#lesson-installing-orcc-tools). Here you will find where to get and how to install the latest ORCC.
 
-[Hello World](./src/net/sf/orcc/tutorial/l00HelloWorld). This lesson shows how to compile and run an application.
+[Hello world](#lesson-0-hello-world). This lesson shows how to compile and run an application.
 
-1. [Simple actor](./src/net/sf/orcc/tutorial/l01SimpleActor). The simplest language constructions which follow the dataflow model are introduced.
-2. [Non-determinism](./src/net/sf/orcc/tutorial/l02Nondeterminism). Non-deterministic nature of unconstrained multiple actions of the same actor is explained.
-3. [Guarded actions](./src/net/sf/orcc/tutorial/l03GuardedActions). The way to restrict actions executions with conditions is introduced. 
-4. [States](./src/net/sf/orcc/tutorial/l04States). The memory (or *states*) of actors which can affect the consequent executions is introduced.
-5. [Schedules](./src/net/sf/orcc/tutorial/l05Schedules). Schedules is a convenient way to implement finite state machines.
-6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities). RCV CAL provides language constructions to give priorities to the actions.
+1. [Simple actor](#lesson-1-simple-actor). The simplest language constructions which follow the dataflow model are introduced.
+2. [Non determinism](#lesson-2-non-determinism). Non-deterministic nature of unconstrained multiple actions of the same actor is explained.
+3. [Guarded actions](#lesson-3-guarded-actions). The way to restrict actions executions with conditions is introduced. 
+4. [State variables](#lesson-4-state-variables) of actors which can affect the consequent executions is introduced.
+5. [Schedules](#lesson-5-schedules). Schedules is a convenient way to implement finite state machines.
+6. [Priorities](#lesson-6-priorities). RCV CAL provides language constructions to give priorities to the actions.
 
 
-# Installing ORCC
+# Installing ORCC Tools
 
 Before you start, you have to install all the tools needed for compiling and running provided examples.
 Open RVC CAL Compiler (Orcc) is made for the Eclipse platform. So in order to use it you will need to install Java Runtime Environment and Eclipse IDE.
@@ -52,7 +52,7 @@ To install Orcc, you can use the Eclipse Software Update Manager. To do that,
 
 Now you can proceed with the [Hello World example](./src/net/sf/orcc/tutorial/l00HelloWorld).
 
-# Lesson 0. Hello world
+# Lesson 0. Hello World
 
 ### Creating new project
 First you need to create new ORCC project. 
@@ -155,8 +155,7 @@ You should see that in Eclipse's console:
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_16_Run_simulation.png)
 
 
----
-[Main page](../../../../../../) | [Next lesson](../l01SimpleActor)
+
 ## Lesson 1. Simple Actor
 
 #### Structure of actors
@@ -301,7 +300,7 @@ After you finish all the examples above you can build a network similar to the s
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_02_Simple_actors.png)
 
 
-# Lesson 2. Nondeterminism
+# Lesson 2. Non-determinism
 
 As was mentioned in previous lesson, actors may have multiple actions. So in the following example there are two.
 
