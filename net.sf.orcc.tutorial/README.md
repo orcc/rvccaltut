@@ -11,7 +11,7 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 
 [Installing ORCC Tools](./Installing_ORCC.md). Here you will find where to get and how to install the latest ORCC.
 
-[Hello World](./src/net/sf/orcc/tutorial/l00HelloWorld). This lesson shows how to compile and run an application.
+[Hello world](./src/net/sf/orcc/tutorial/l00HelloWorld). This lesson shows how to compile and run an application.
 
 1. [Simple actor](./src/net/sf/orcc/tutorial/l01SimpleActor). The simplest language constructions which follow the dataflow model are introduced.
 2. [Non-determinism](./src/net/sf/orcc/tutorial/l02Nondeterminism). Non-deterministic nature of unconstrained multiple actions of the same actor is explained.
