@@ -62,6 +62,7 @@ actor AlmostFairMerge () int In1, int In2 ==> int Out :
 end 
 ```
 
+The actor clearly has two states. So we will implement it using schedules:
 
 ```
 package net.sf.orcc.tutorial.l05Schedules;
@@ -78,5 +79,6 @@ actor AlmostFairMergeFSM () int In1, int In2 ==> int Out :
 	
 end 
 ```
+Here you can see two actions ```A```, ```B``` and two states ```S1```, ```S2```, which is the same as in the original actor.
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_01_Network.png)
