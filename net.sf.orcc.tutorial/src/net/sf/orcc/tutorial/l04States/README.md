@@ -1,4 +1,4 @@
-# Lesson 4. States
+# Lesson 4. State variables
 
 So far, we saw only how actions can fire on not fire on external conditions, but there was nothing inside of actor which could affect subsequent firerings.
 
@@ -20,8 +20,7 @@ In line ```int sum := 0;``` we declare state variable ```sum``` and initialize i
 
 It is important to notice here (even thought it was mentioned in previous lessons) that the *output expression is evaluated after the action firing*. The value of ```sum``` in output expression ```Out: [sum]``` is the one which has been already updated by the action.
 
-
-
+The previous example does not clearlly represent the *state meaning* of state variables. To explain that we will introduce the actor which selects the input stream according to internal state and send it the the output (recall ```Select``` actor from the previous lesson). 
 
 ```
 package net.sf.orcc.tutorial.l04States;
