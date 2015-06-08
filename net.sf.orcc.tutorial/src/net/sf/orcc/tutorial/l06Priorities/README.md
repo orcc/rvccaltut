@@ -22,6 +22,8 @@ end
 Here we have two actions labeled ```InA``` and ```InB```. And the line ```InA > InB;``` in the ```priority ... end``` block tells the actor that ```InA``` has a higher priority than ```InB```. So in case when tokens will be available on both inputs ```A```and ```B```, the token from input ```A``` always goes to the output fist.
 
 
+The following example illustrates how we can give equal priorities to groups of actions.
+
 ```
 package net.sf.orcc.tutorial.l06Priorities;
 
@@ -38,5 +40,10 @@ actor FairMerge () int A, int B ==> int Out :
 
 end
 ```
+First you have to pay attention to the action tagging. We can group actions labeling them in the way ```One.a```, ```One.b```. So here we have a group ```One```. Similarly, we tag othe two actions to the group ```Both```.
+
+And finally we give higher priority to the group ```Both```.
+
+
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/06_01_Network.png)
