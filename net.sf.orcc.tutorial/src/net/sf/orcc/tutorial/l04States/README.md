@@ -4,7 +4,7 @@ So far, we saw only how actions can fire on not fire on external conditions, but
 
 The *state variables* are internal memory of an actor. They represent actor's the internal state. Actions within an actor can change its internal state and thereby atlernate subsequent firings.
 
-
+The simplest example of using state variable is a ```Sum``` actor.
 ```
 package net.sf.orcc.tutorial.l04States;
 
@@ -16,6 +16,8 @@ actor Sum () int In ==> int Out :
 	end
 end
 ```
+In line ```int sum := 0;``` we declare state variable ```sum``` and initialize it with zero. In this example you can also nitice that action can manipulate data within its body. In this case the code between ```do``` and ```end``` just adds input token to the state variable ```sum```.
+
 
 ```
 package net.sf.orcc.tutorial.l04States;
