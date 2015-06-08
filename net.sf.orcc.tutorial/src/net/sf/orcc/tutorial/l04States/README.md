@@ -51,6 +51,13 @@ actor IterSelect () bool S, int A, int B ==> int Out :
 		 
 end
 ```
+Here in actor ```IterSelect``` we fisrt declare state variable ```int state := 0;```.
+
+The first action consume token from the input ```S``` and does not produce any output. It just modifies the internal state. (You can notice that there is no output expression after sign ```==>```, but guard). So this action fires if current state is *zero* and changes it to ```1``` if there is ```true``` on the input ```S``` or to ```2``` if there is ```false```.
+
+The second action changes ```state```to zero and copyies a token from input ```A``` to the output but only fires when  internal state variable ```state``` *current* value is ```1```. The third action do the same but only when ```state``` value is 2.
+
+
 
 ```
 package net.sf.orcc.tutorial.l04States;
