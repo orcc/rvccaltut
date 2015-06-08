@@ -81,4 +81,5 @@ end
 ```
 Here you can see two actions ```A```, ```B``` and two states ```S1```, ```S2```, which is the same as in the original actor.
 
+You can implement a network according to the diagram:
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_01_Network.png)
