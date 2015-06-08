@@ -1,4 +1,4 @@
-# Lesson 0. Hello world
+# Lesson 0. Hello World
 
 ### Creating new project
 First you need to create new ORCC project. 
