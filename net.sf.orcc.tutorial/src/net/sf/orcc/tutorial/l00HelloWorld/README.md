@@ -15,13 +15,13 @@ You will see that default src directory has been added to the created project.
 
 ### Create new package
 
-Right Click on the src folder in Project Exploer pane. New > Package
+Right Click on the src folder in Project Explorer pane. New > Package
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_03_Create_new_package.png)
 
 ### Creating Actor
-In Project exploer pane, select package you just created. Then click menu "File > New > File..."
-Specify the name and the extention .cal
+In Project explorer pane, select package you just created. Then click menu "File > New > File..."
+Specify the name and the extension .cal
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_04_Create_new_actor.png)
 
@@ -44,7 +44,7 @@ The action within this actor always executes regardless to any input or other co
 You will find detailed explanation of the syntax in next lessons.
 
 ### Creating Network
-RVC CAL is a language wich implements the Dataflow paradigm. This means that in order to run the application you need to build a network of actors. In our case the network will be degenerate and will consist of only one actor.
+RVC CAL is a language which implements the Dataflow paradigm. This means that in order to run the application you need to build a network of actors. In our case the network will be degenerate and will consist of only one actor.
 
 To build a network you need to create new XDF file. Go to  File > New > Other then select Orcc > XDF Network.
 
@@ -64,7 +64,7 @@ Now you have to link this instance to the actor created before. Right-click on t
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_09_Link_actor.png)
 
-Then, select the "HelloWorld" actor in the newly opended box.
+Then, select the "HelloWorld" actor in the newly opened box.
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_10_Link_actor.png)
 

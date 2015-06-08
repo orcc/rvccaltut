@@ -12,9 +12,9 @@ the actor:
 
 Describing an actor involves describing its interface to the outside, the ports, the structure of its internal state, as well as the steps it can perform, what these steps do (in terms of token production and consumption, and the update of the actor state), and how to pick the step that the actor will perform next.
 
-#### The simpliest actor
+#### The simplest actor
 
-The simpliest actor just copies a token from the input to the output unchanged.
+The simplest actor just copies a token from the input to the output unchanged.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -22,14 +22,14 @@ actor ID () int In ==> int Out :
   first: action In: [a] ==>  Out: [a] end
 end
 ```
-In the first line we specify the pakage.
+In the first line we specify the package.
 
-The main entity in RVC CAL is an *actor*. In the example above you see that to describe an actor one should use keyword ```actor``` followed by the name of the actor and paremeters in parentheses (empty in this example).
-Then you specify input ports before the sign ```==>```, and output ports after this sign. RVC CAL is a *statically typed* language, so you need explicitely define type for each variable, i.e. in the line ```actor ID () int In ==> int Out :``` ports ```In``` and ```Out``` both are of type ```int```.
+The main entity in RVC CAL is an *actor*. In the example above you see that to describe an actor one should use keyword ```actor``` followed by the name of the actor and parameters in parentheses (empty in this example).
+Then you specify input ports before the sign ```==>```, and output ports after this sign. RVC CAL is a *statically typed* language, so you need explicitly define type for each variable, i.e. in the line ```actor ID () int In ==> int Out :``` ports ```In``` and ```Out``` both are of type ```int```.
 The colon at the end of the line marks the start of the actor body which is bounded by the keyword  ```end``` from the other side.
 
 Inside of the body each actor has one or more *actions*, which execute (*fire*) at one step each. Actions may (or may not) *consume* input tokens and *produce* output tokens at each step.
-Syntax of describing an action in RVC CAL is the following: ```first: ``` is an *optional* identifier of an action, which can be ommited. After keyword ```action``` and in front of ```==>``` sign you see the *input pattern*.
+Syntax of describing an action in RVC CAL is the following: ```first: ``` is an *optional* identifier of an action, which can be omitted. After keyword ```action``` and in front of ```==>``` sign you see the *input pattern*.
 
 ```
 actor <ActorIdentifier> () <input ports> ==> <output ports> :
@@ -39,9 +39,9 @@ end
 
 *Input pattern* specifies how many tokens to consume from which ports and how to call these tokens in the rest of the action. The input pattern in ```ID``` actor is ```In: [a]```. It tells the action to consume one token from the input ```In``` and name it ```a``` within the action body. *Input pattern* of action realize the idea of [pattern matching](http://en.wikipedia.org/wiki/Pattern_matching).
 
-The expression following ```==>``` sign is an *output expression*. It defines the number and values of output tokens which will be produced on each output port by each *firing* of the action. In this example ```Out: [a]``` is an *output expression*. It defines that exactly one token will be pruduced on output port ```Out```, and the value of that token will be ```a```.
+The expression following ```==>``` sign is an *output expression*. It defines the number and values of output tokens which will be produced on each output port by each *firing* of the action. In this example ```Out: [a]``` is an *output expression*. It defines that exactly one token will be produced on output port ```Out```, and the value of that token will be ```a```.
 
-It is important to understand the difference between *input pettern* and *output expression*.  In the input pattern the local variable ```a``` is daclared and assigned with the value of input token whenever action has just fired. The output expression uses that variable and send the value of ```a``` as a produced token to the output port at the end of the action firing.
+It is important to understand the difference between *input pattern* and *output expression*.  In the input pattern the local variable ```a``` is declared and assigned with the value of input token whenever action has just fired. The output expression uses that variable and send the value of ```a``` as a produced token to the output port at the end of the action firing.
 
 #### Running the examples
 
@@ -57,17 +57,17 @@ end
 ```
 
 In order to build working network we will need several additional actors to produce data and print results to the console.
-For this example we will use ```Source``` and ```Printer``` actors as utilities. You can just dowload them from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) and add to your project.
+For this example we will use ```Source``` and ```Printer``` actors as utilities. You can just download them from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) and add to your project.
 
->  ```Source``` actor is just a counter wich produces a continious sequence of nambers. You can also specify parameters for starting number (default is 1) and the counter upper bound (default is 10). To know how to do that see section *Other simple actors > Scale*
+>  ```Source``` actor is just a counter which produces a continuous sequence of numbers. You can also specify parameters for starting number (default is 1) and the counter upper bound (default is 10). To know how to do that see section *Other simple actors > Scale*
 
-> ```Printer``` prints all the consumed tokens to the console. You can specify the name for each instatce. That would be really usefull if you have several of them printing to the same console simultaniously.
+> ```Printer``` prints all the consumed tokens to the console. You can specify the name for each instance. That would be really useful if you have several of them printing to the same console simultaneously.
 
 Now you can create the network just following the steps from previous lesson [Hello world](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/l00HelloWorld).
 
 After you add instances of actors: ```ID```, ```Source``` and ```Printer```. Connect ```Source``` output to ```ID``` input, and ```ID``` output to ```Printer ``` input.
 
->Hint: You can just drug-and-drop actor file from Project explorer pane to the XDF netwok diagram to add an instance of actor.
+>Hint: You can just drug-and-drop actor file from Project explorer pane to the XDF network diagram to add an instance of actor.
 
 Now you can run example as was described in the previous lesson and see the result in the console.
 
@@ -86,10 +86,10 @@ actor Add () int In1, int In2 ==> int Out :
 	end
 end
 ```
-We have now two *input ports* seperated by comma ```int In1, int In2``` in the daclaration of actor. Also *input pattern* changed to ```In1: [a], In2: [b]``` which means that action will *fire* only in case when both ports ```In1``` and ```In2``` will have a valid data on their inputs. Consumed toklens than will be assigned to ```a```and ```b``` respectively. Moreover, this example clarify the differens between input pattern and output expression. Looking at ```Out: [a+b]``` you can see that output expression includes real expression (sum of two variable), which will be calculated after action is finished; and result will be sent to the output port.
+We have now two *input ports* separated by comma ```int In1, int In2``` in the declaration of actor. Also *input pattern* changed to ```In1: [a], In2: [b]``` which means that action will *fire* only in case when both ports ```In1``` and ```In2``` will have a valid data on their inputs. Consumed tokens than will be assigned to ```a```and ```b``` respectively. Moreover, this example clarify the difference between input pattern and output expression. Looking at ```Out: [a+b]``` you can see that output expression includes real expression (sum of two variable), which will be calculated after action is finished; and result will be sent to the output port.
 
 ##### AddSeq
-Previous example cunsume two tokens from to input ports, but what happens if we have only one input port. Can we still add tow values? The following example provides the solution.
+Previous example consume two tokens from to input ports, but what happens if we have only one input port. Can we still add tow values? The following example provides the solution.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -101,7 +101,7 @@ end
 As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input during one firing. You also can put more than two tokens separated by come in the input pattern.
 
 ##### AddSubSeq
-The output expression as illustrated in this example can also produce more than one token. You have just to wite these expressions separated by coma within square brackets.
+The output expression as illustrated in this example can also produce more than one token. You have just to write these expressions separated by coma within square brackets.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -133,7 +133,7 @@ In the properties pane click on the *Arguments* on the left. You will see the li
 
 Now when you run the network this particular instance of the actor will multiply the input token by 7.
 
->Hint: You can specify paramenters for ```Source``` and ```Printer``` actors, which dowloaded from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) in the begining of the lesson.
+>Hint: You can specify parameters for ```Source``` and ```Printer``` actors, which you downloaded from the [Github repository](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils) in the beginning of the lesson.
 
 #### Network of simple actors
 
