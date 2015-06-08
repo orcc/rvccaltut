@@ -37,7 +37,9 @@ describes our automaton. Basically, it is a textual representation of a finite s
 Each state transition consists of three parts: the original state, a list of action tags, and the following state. For instance, in the transition ```init (readT) --> waitA;``` we have ```init``` as the original state, ```readT``` as the action tag, and ```waitA``` as the following state. The way to read this is that if the schedule is in state ```init``` and an action tagged with ```readT``` occurs, the schedule will subsequently be in state ```waitA```.
 
 The example above shows how we can make impementation simpler and more readable. But in fact, it complicicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
+Let's review a simpler example to learn how we can avoid incresing complexity using *schedules*.
 
+Actor ```AlmostFairMerge``` merges two streams almost fair, as it is biased with respect to which input it starts reading from. But once it is running, it will strictly alternate between the two:
 ```
 package net.sf.orcc.tutorial.l05Schedules;
 
@@ -59,6 +61,7 @@ actor AlmostFairMerge () int In1, int In2 ==> int Out :
 	
 end 
 ```
+
 
 ```
 package net.sf.orcc.tutorial.l05Schedules;
