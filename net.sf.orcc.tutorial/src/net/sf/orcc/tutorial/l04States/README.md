@@ -1,5 +1,10 @@
 # Lesson 4. States
 
+So far, we saw only how actions can fire on not fire on external conditions, but there was nothing inside of actor which could affect subsequent firerings.
+
+The *state variables* are internal memory of an actor. They represent actor's the internal state. Actions within an actor can change its internal state and thereby atlernate subsequent firings.
+
+
 ```
 package net.sf.orcc.tutorial.l04States;
 
