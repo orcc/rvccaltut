@@ -63,19 +63,17 @@ end
 ```
 package net.sf.orcc.tutorial.l05Schedules;
 
-actor IterSelectFSM () bool S, int A, int B ==> int Out :
-	readT: action S: [sel] ==> guard sel end
-	readF: action S: [sel] ==> guard not sel end
-	copyA: action A: [x] ==> Out: [x] end
-	copyB: action B: [x] ==> Out: [x] end
+actor AlmostFairMergeFSM () int In1, int In2 ==> int Out :
 	
-	schedule fsm init :
-		init (readT)  --> waitA;
-		init (readF)  --> waitB;
-		waitA (copyA) --> init;
-		waitB (copyB) --> init;
+	A: action In1: [x] ==> Out: [x] end
+	B: action In2: [x] ==> Out: [x] end
+	
+	schedule fsm S1 :
+		S1 (A) --> S2;
+		S2 (B) --> S1;
 	end
-end
+	
+end 
 ```
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_01_Network.png)
