@@ -2,7 +2,7 @@
 
 The ```InterSelect``` example in the previous lessons implements a commolny used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
 
-RVC CAL provides special sintax to describe fitite state machines. It is called *schedules*. The following example illustrates using of *schedules*
+RVC CAL provides special sintax to describe fitite state machines. It is called *schedules*. The following example ```IterSelectFSM``` illustrates using of *schedules*
 
 ```
 package net.sf.orcc.tutorial.l05Schedules;
@@ -21,6 +21,19 @@ actor IterSelectFSM () bool S, int A, int B ==> int Out :
 	end
 end
 ```
+First you need to recall that every action can have identifier or lable, e.g. here ```readT: action S: [sel] ==> guard sel end``` the name of the action is ```readT```.
+
+The block of code:
+```
+schedule fsm init :
+	init (readT)  --> waitA;
+	init (readF)  --> waitB;
+	waitA (copyA) --> init;
+	waitB (copyB) --> init;
+end
+```
+describes our automaton. It starts with the keywords ```schedule fsm``` followed by the label ```init```.
+
 
 ```
 package net.sf.orcc.tutorial.l05Schedules;
