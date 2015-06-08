@@ -1,5 +1,9 @@
 # Lesson 5. Schedules
 
+The ```InterSelect``` example in the previous lessons implements a commolny used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
+
+RVC CAL provides special sintax to describe fitite state machines. It is called *schedules*. The following example illustrates using of *schedules*
+
 ```
 package net.sf.orcc.tutorial.l05Schedules;
 
