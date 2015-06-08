@@ -18,4 +18,4 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 3. [Guarded actions](./src/net/sf/orcc/tutorial/l03GuardedActions). The way to restrict actions executions with conditions is introduced. 
 4. [States](./src/net/sf/orcc/tutorial/l04States). The memory (or *states*) of actors which can affect the consequent executions is introduced.
 5. [Schedules](./src/net/sf/orcc/tutorial/l05Schedules). Schedules is a convienient way to implement finite state machines.
-6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities). RCV CAL allows prioritize actions firings.
+6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities). RCV CAL allows give priorities to actions.
