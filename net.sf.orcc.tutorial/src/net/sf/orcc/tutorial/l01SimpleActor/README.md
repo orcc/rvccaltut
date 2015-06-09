@@ -1,4 +1,4 @@
-## Lesson 1. Simple Actor
+# Lesson 1. Simple Actor
 
 #### Structure of actors
 
