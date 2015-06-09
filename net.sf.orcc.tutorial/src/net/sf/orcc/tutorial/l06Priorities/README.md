@@ -2,7 +2,7 @@
 
 In the previous lessons we learnt about *guards*, *states* and *schedules*. But there is one more way to manage action firings in RVC CAL.
 
-In case when contidions have met for more then one action to fire we can simple give higher priorities to some actions against others.
+In case when conditions have met for more then one action to fire we can simply give higher priorities to some actions against others.
 
 Following example explains how to use this in RVC CAL:
 ```
@@ -19,7 +19,7 @@ actor BiasedMerge () int A, int B ==> int Out :
 	
 end
 ```
-Here we have two actions labeled ```InA``` and ```InB```. And the line ```InA > InB;``` in the ```priority ... end``` block tells the actor that ```InA``` has a higher priority than ```InB```. So in case when tokens will be available on both inputs ```A```and ```B```, the token from input ```A``` always goes to the output fist.
+Here we have two actions labelled ```InA``` and ```InB```. And the line ```InA > InB;``` in the ```priority ... end``` block tells the actor that ```InA``` has a higher priority than ```InB```. So in case when tokens will be available on both inputs ```A``` and ```B```, the token from input ```A``` will always go to the output fist.
 
 
 The following example illustrates how we can give equal priorities to groups of actions.
@@ -40,10 +40,10 @@ actor FairMerge () int A, int B ==> int Out :
 
 end
 ```
-First you have to pay attention to the action tagging. We can group actions labeling them in the way ```One.a```, ```One.b```. So here we have a group ```One```. Similarly, we tag othe two actions to the group ```Both```.
+First you have to pay attention to the action tagging. We can group actions labelling them in the way ```One.a```, ```One.b```. So here we have a group ```One```. Similarly, we tag other two actions to the group ```Both```.
 
 And finally we give higher priority to the group ```Both```.
 
 
-
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/06_01_Network.png)
+

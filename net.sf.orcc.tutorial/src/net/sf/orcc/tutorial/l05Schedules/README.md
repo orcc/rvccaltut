@@ -1,8 +1,8 @@
 # Lesson 5. Schedules
 
-The ```InterSelect``` example in the previous lessons implements a commolny used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
+The ```InterSelect``` example in the previous lessons implements a commonly used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
 
-RVC CAL provides special sintax to describe fitite state machines. It is called *schedules*. The following example ```IterSelectFSM``` illustrates using of *schedules*
+RVC CAL provides special syntax to describe finite state machines. It is called *schedules*. The following example ```IterSelectFSM``` illustrates using of *schedules*
 
 ```
 package net.sf.orcc.tutorial.l05Schedules;
@@ -21,7 +21,7 @@ actor IterSelectFSM () bool S, int A, int B ==> int Out :
 	end
 end
 ```
-First you need to recall that every action can have identifier or lable, e.g. here ```readT: action S: [sel] ==> guard sel end``` the name of the action is ```readT```. This lables are called *action tags*.
+First you need to recall that every action can have identifier or label, e.g. here ```readT: action S: [sel] ==> guard sel end``` the name of the action is ```readT```. This labels are called *action tags*.
 
 The block of code:
 ```
@@ -36,8 +36,8 @@ describes our automaton. Basically, it is a textual representation of a finite s
 
 Each state transition consists of three parts: the original state, a list of action tags, and the following state. For instance, in the transition ```init (readT) --> waitA;``` we have ```init``` as the original state, ```readT``` as the action tag, and ```waitA``` as the following state. The way to read this is that if the schedule is in state ```init``` and an action tagged with ```readT``` occurs, the schedule will subsequently be in state ```waitA```.
 
-The example above shows how we can make impementation simpler and more readable. But in fact, it complicicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
-Let's review a simpler example to learn how we can avoid incresing complexity using *schedules*.
+The example above shows how we can make implementation simpler and more readable. But in fact, it complicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
+Let's review a simpler example to learn how we can avoid increasing complexity using *schedules*.
 
 Actor ```AlmostFairMerge``` merges two streams almost fair, as it is biased with respect to which input it starts reading from. But once it is running, it will strictly alternate between the two:
 ```
