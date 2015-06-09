@@ -418,9 +418,9 @@ Now you can try to build network like the following. For the boolean input of th
 
 # Lesson 4. State variables
 
-So far, we saw only how actions can fire on not fire on external conditions, but there was nothing inside of actor which could affect subsequent firerings.
+So far, we saw only how actions can fire on not fire on external conditions, but there was nothing inside of the actor which could affect subsequent firings.
 
-The *state variables* are internal memory of an actor. They represent actor's the internal state. Actions within an actor can change its internal state and thereby atlernate subsequent firings.
+The *state variables* are internal memory of an actor. They represent actor's the internal state. Actions within an actor can change its internal state and thereby alternate subsequent firings.
 
 The simplest example of using state variable is a ```Sum``` actor.
 ```
@@ -434,11 +434,11 @@ actor Sum () int In ==> int Out :
 	end
 end
 ```
-In line ```int sum := 0;``` we declare state variable ```sum``` and initialize it with zero. In this example you can also nitice that action can manipulate data within its body. In this case the code between ```do``` and ```end``` updates the state variable ```sum``` adding consumed token to it. Construction like that are usually accumulators. So here you can see that action not only cunsume input token and produce output, it also modifies internal state of the actor, which will affect the output of the next firing.
+In line ```int sum := 0;``` we declare state variable ```sum``` and initialize it with zero. In this example you can also notice that action can manipulate data within its body. In this case the code between ```do``` and ```end``` updates the state variable ```sum``` adding consumed token to it. Construction like that are usually called accumulators. So here you can see that action not only consumes input token and produces output, but also modifies internal state of the actor, which will affect the output of the next firing.
 
-It is important to notice here (even thought it was mentioned in previous lessons) that the *output expression is evaluated after the action firing*. The value of ```sum``` in output expression ```Out: [sum]``` is the one which has been already updated by the action.
+It is important to notice here (even thought it was mentioned in previous lessons) that the *output expression is evaluated after action fired*. The value of ```sum``` in output expression ```Out: [sum]``` is the one which has been already updated by the action.
 
-The previous example does not clearlly represent the *state meaning* of state variables. To explain that we will introduce the actor which selects the input stream according to internal state and send it the the output (recall ```Select``` actor from the previous lesson). 
+The previous example does not clearly represent the *state meaning* of state variables. To explain that we will introduce the actor which selects the input stream according to internal state and send it the the output (recall ```Select``` actor from the previous lesson). 
 
 ```
 package net.sf.orcc.tutorial.l04States;
@@ -469,11 +469,11 @@ actor IterSelect () bool S, int A, int B ==> int Out :
 		 
 end
 ```
-Here in actor ```IterSelect``` we fisrt declare state variable ```int state := 0;```.
+Here in actor ```IterSelect``` we declare state variable ```int state := 0;```.
 
-The first action consume token from the input ```S``` and does not produce any output. It just modifies the internal state. (You can notice that there is no output expression after sign ```==>```, but guard). So this action fires if current state is *zero* and changes it to ```1``` if there is ```true``` on the input ```S``` or to ```2``` if there is ```false```.
+The first action consumes token from the input ```S``` and does not produce any output. It just modifies the internal state. (You can notice that there is no output expression after sign ```==>```, but guard). So this action fires if current state is ```0``` and changes it to ```1``` if there is ```true``` on the input ```S``` or to ```2``` if there is ```false```.
 
-The second action changes ```state```to zero and copyies a token from input ```A``` to the output but only fires when  internal state variable ```state``` *current* value is ```1```. The third action do the same but only when ```state``` value is 2.
+The second action changes ```state``` to zero and copies a token from input ```A``` to the output but only fires when *current* value of the internal state variable ```state``` is ```1```. The third action do the same but only when ```state``` value is 2.
 
 Note that ```Select``` and ```IterSelect``` are almost, but not entirely, equivalent. First of all, ```IterSelect``` makes twice as many steps in order to process the same number of tokens. Secondly, it actually reads, and therefore consumes, the S input token, irrespective of whether a matching data token is available on A or B. And unlike the previous examples, the ```IterSelect``` actor uses guards that depend on an actor state variable rather than on an input token.
 
@@ -499,16 +499,17 @@ actor AddOrSub () int In ==> int Out :
 
 end
 ```
-Here we have to actions. One of them adds input token to the state variable ```sum``` and another substracts the input token from it depending on whether the token is less or not less then the value of ```sum``` itself.
+Here we have to actions. One of them adds input token to the state variable ```sum``` and another subtracts the input token from it depending on whether the token is less or not less then the value of ```sum``` itself.
 
 You can build the network similar to the following diagram to experiment with these actors.
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/04_01_Network.png)
+
 # Lesson 5. Schedules
 
-The ```InterSelect``` example in the previous lessons implements a commolny used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
+The ```InterSelect``` example in the previous lessons implements a commonly used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
 
-RVC CAL provides special sintax to describe fitite state machines. It is called *schedules*. The following example ```IterSelectFSM``` illustrates using of *schedules*
+RVC CAL provides special syntax to describe finite state machines. It is called *schedules*. The following example ```IterSelectFSM``` illustrates using of *schedules*
 
 ```
 package net.sf.orcc.tutorial.l05Schedules;
@@ -527,7 +528,7 @@ actor IterSelectFSM () bool S, int A, int B ==> int Out :
 	end
 end
 ```
-First you need to recall that every action can have identifier or lable, e.g. here ```readT: action S: [sel] ==> guard sel end``` the name of the action is ```readT```. This lables are called *action tags*.
+First you need to recall that every action can have identifier or label, e.g. here ```readT: action S: [sel] ==> guard sel end``` the name of the action is ```readT```. This labels are called *action tags*.
 
 The block of code:
 ```
@@ -542,8 +543,8 @@ describes our automaton. Basically, it is a textual representation of a finite s
 
 Each state transition consists of three parts: the original state, a list of action tags, and the following state. For instance, in the transition ```init (readT) --> waitA;``` we have ```init``` as the original state, ```readT``` as the action tag, and ```waitA``` as the following state. The way to read this is that if the schedule is in state ```init``` and an action tagged with ```readT``` occurs, the schedule will subsequently be in state ```waitA```.
 
-The example above shows how we can make impementation simpler and more readable. But in fact, it complicicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
-Let's review a simpler example to learn how we can avoid incresing complexity using *schedules*.
+The example above shows how we can make implementation simpler and more readable. But in fact, it complicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
+Let's review a simpler example to learn how we can avoid increasing complexity using *schedules*.
 
 Actor ```AlmostFairMerge``` merges two streams almost fair, as it is biased with respect to which input it starts reading from. But once it is running, it will strictly alternate between the two:
 ```
@@ -593,7 +594,7 @@ You can implement a network according to the diagram:
 
 In the previous lessons we learnt about *guards*, *states* and *schedules*. But there is one more way to manage action firings in RVC CAL.
 
-In case when contidions have met for more then one action to fire we can simple give higher priorities to some actions against others.
+In case when conditions have met for more then one action to fire we can simply give higher priorities to some actions against others.
 
 Following example explains how to use this in RVC CAL:
 ```
@@ -610,7 +611,7 @@ actor BiasedMerge () int A, int B ==> int Out :
 	
 end
 ```
-Here we have two actions labeled ```InA``` and ```InB```. And the line ```InA > InB;``` in the ```priority ... end``` block tells the actor that ```InA``` has a higher priority than ```InB```. So in case when tokens will be available on both inputs ```A```and ```B```, the token from input ```A``` always goes to the output fist.
+Here we have two actions labelled ```InA``` and ```InB```. And the line ```InA > InB;``` in the ```priority ... end``` block tells the actor that ```InA``` has a higher priority than ```InB```. So in case when tokens will be available on both inputs ```A``` and ```B```, the token from input ```A``` will always go to the output fist.
 
 
 The following example illustrates how we can give equal priorities to groups of actions.
@@ -631,10 +632,10 @@ actor FairMerge () int A, int B ==> int Out :
 
 end
 ```
-First you have to pay attention to the action tagging. We can group actions labeling them in the way ```One.a```, ```One.b```. So here we have a group ```One```. Similarly, we tag othe two actions to the group ```Both```.
+First you have to pay attention to the action tagging. We can group actions labelling them in the way ```One.a```, ```One.b```. So here we have a group ```One```. Similarly, we tag other two actions to the group ```Both```.
 
 And finally we give higher priority to the group ```Both```.
 
 
-
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/06_01_Network.png)
+
