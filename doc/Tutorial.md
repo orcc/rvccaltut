@@ -16,7 +16,7 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 1. [Simple actor](#lesson-1-simple-actor). The simplest language constructions which follow the dataflow model are introduced.
 2. [Non determinism](#lesson-2-non-determinism). Non-deterministic nature of unconstrained multiple actions of the same actor is explained.
 3. [Guarded actions](#lesson-3-guarded-actions). The way to restrict actions executions with conditions is introduced. 
-4. [State variables](#lesson-4-state-variables) of actors which can affect the consequent executions is introduced.
+4. [State variables](#lesson-4-state-variables). The memory (or *states*) of actors which can affect the consequent executions is introduced.
 5. [Schedules](#lesson-5-schedules). Schedules is a convenient way to implement finite state machines.
 6. [Priorities](#lesson-6-priorities). RCV CAL provides language constructions to give priorities to the actions.
 
