@@ -89,7 +89,7 @@ end
 We have now two *input ports* separated by comma ```int In1, int In2``` in the declaration of actor. Also *input pattern* changed to ```In1: [a], In2: [b]``` which means that action will *fire* only in case when both ports ```In1``` and ```In2``` will have a valid data on their inputs. Consumed tokens than will be assigned to ```a```and ```b``` respectively. Moreover, this example clarify the difference between input pattern and output expression. Looking at ```Out: [a+b]``` you can see that output expression includes real expression (sum of two variable), which will be calculated after action is finished; and result will be sent to the output port.
 
 ##### AddSeq
-Previous example consume two tokens from to input ports, but what happens if we have only one input port. Can we still add tow values? The following example provides the solution.
+Previous example consume two tokens from two input ports, but what happens if we have only one input port. Can we still add two values? The following example provides the solution.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -98,7 +98,9 @@ actor AddSeq () int In1 ==> int Out :
 	end
 end
 ```
-As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input during one firing. You also can put more than two tokens separated by come in the input pattern.
+As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input during one firing. It is important to notice, that action will fire *only* when the data on the input will match the input pattern. And since our pattern consists of two tokens, action will fire *only when there are two tokens available on the input*.
+
+You also can put more than two tokens separated by come in the input pattern.
 
 ##### AddSubSeq
 The output expression as illustrated in this example can also produce more than one token. You have just to write these expressions separated by coma within square brackets.
