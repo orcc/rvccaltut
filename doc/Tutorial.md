@@ -27,12 +27,13 @@ Before you start, you have to install all the tools needed for compiling and run
 Open RVC CAL Compiler (Orcc) is made for the Eclipse platform. So in order to use it you will need to install Java Runtime Environment and Eclipse IDE.
 
 #### Java Runtime Environment
-You can download and install the latest JRE release from [java.com](https://java.com/en/download/). ORCC requires version 1.6 of higher of JRE.
+ORCC requires version 1.6 of higher of JRE. You can download and install the latest JRE release from [java.com](https://java.com/en/download/).
+To use *Eclipse IDE for Java Developers edition*, you will need to instal Java Development Kit (JDK) as well, which you can download from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 #### Eclipse
 ORCC is compatible with Eclipse versions 4.3 and higher
 
-You can download and install Eclipse IDE from https://www.eclipse.org/downloads/ (If unsure use Eclipse IDE for Java Developers edition).
+You can download and install Eclipse IDE from https://www.eclipse.org/downloads/ (We recomend to use Eclipse IDE for Java Developers edition).
 
 To install just extract the archive into a local directory.
 
@@ -53,6 +54,8 @@ To install Orcc, you can use the Eclipse Software Update Manager. To do that,
 Now you can proceed with the [Hello World example](./src/net/sf/orcc/tutorial/l00HelloWorld).
 
 # Lesson 0. Hello World
+
+> Note: before you start, make sure that active perspective in your Eclipse is `Java EE`, otherwise the menus will differ slightly and you'll need to look for some menu items by yourself.
 
 ### Creating new project
 First you need to create new ORCC project. 
@@ -247,7 +250,7 @@ end
 We have now two *input ports* separated by comma ```int In1, int In2``` in the declaration of actor. Also *input pattern* changed to ```In1: [a], In2: [b]``` which means that action will *fire* only in case when both ports ```In1``` and ```In2``` will have a valid data on their inputs. Consumed tokens than will be assigned to ```a```and ```b``` respectively. Moreover, this example clarify the difference between input pattern and output expression. Looking at ```Out: [a+b]``` you can see that output expression includes real expression (sum of two variable), which will be calculated after action is finished; and result will be sent to the output port.
 
 ##### AddSeq
-Previous example consume two tokens from to input ports, but what happens if we have only one input port. Can we still add tow values? The following example provides the solution.
+Previous example consume two tokens from two input ports, but what happens if we have only one input port. Can we still add two values? The following example provides the solution.
 ```
 package net.sf.orcc.tutorial.l01SimpleActor;
 
@@ -256,7 +259,9 @@ actor AddSeq () int In1 ==> int Out :
 	end
 end
 ```
-As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input during one firing. You also can put more than two tokens separated by come in the input pattern.
+As you can see the input pattern ```In1: [a, b]``` consumes two tokens from the same input during one firing. It is important to notice, that action will fire *only* when the data on the input will match the input pattern. And since our pattern consists of two tokens, action will fire *only when there are two tokens available on the input*.
+
+You also can put more than two tokens separated by come in the input pattern.
 
 ##### AddSubSeq
 The output expression as illustrated in this example can also produce more than one token. You have just to write these expressions separated by coma within square brackets.
@@ -296,6 +301,8 @@ Now when you run the network this particular instance of the actor will multiply
 #### Network of simple actors
 
 After you finish all the examples above you can build a network similar to the shown on the following picture.
+
+>Remember if you don't specify parameter `name` of actor `Printer` (as it was jasu described in the previous paragraph), you won't know from the console output wich atctor prints what. And since this paramener is a string, it should be surrounded by quotation marks, e.g. `"Printer1"`
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_02_Simple_actors.png)
 
@@ -507,7 +514,7 @@ You can build the network similar to the following diagram to experiment with th
 
 # Lesson 5. Schedules
 
-The ```InterSelect``` example in the previous lessons implements a commonly used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
+The ```InterSelect``` example from the previous lesson implements a commonly used software design pattern called *finite state machines* but describing it in that way is not very easy to understand.
 
 RVC CAL provides special syntax to describe finite state machines. It is called *schedules*. The following example ```IterSelectFSM``` illustrates using of *schedules*
 
@@ -528,7 +535,7 @@ actor IterSelectFSM () bool S, int A, int B ==> int Out :
 	end
 end
 ```
-First you need to recall that every action can have identifier or label, e.g. here ```readT: action S: [sel] ==> guard sel end``` the name of the action is ```readT```. This labels are called *action tags*.
+First you need to recall that every action can have identifier or label, e.g. here ```readT: action S: [sel] ==> guard sel end``` the name of the action is ```readT```. These labels are called *action tags*.
 
 The block of code:
 ```
@@ -541,7 +548,11 @@ end
 ```
 describes our automaton. Basically, it is a textual representation of a finite state machine, given as a list of possible state transitions. The states of that finite state machine are the first and the last identifiers (```init```, ```waitA``` and ```waitB```) in those transitions represented with sign ```-->```. Relating this back to the original version of ```IterSelect```, these states are the possible values of the state variable, i.e. ```0```, ```1```, and ```2```. The initial state of the schedule is the one following ```schedule fsm```. In this example, it is ```init```.
 
-Each state transition consists of three parts: the original state, a list of action tags, and the following state. For instance, in the transition ```init (readT) --> waitA;``` we have ```init``` as the original state, ```readT``` as the action tag, and ```waitA``` as the following state. The way to read this is that if the schedule is in state ```init``` and an action tagged with ```readT``` occurs, the schedule will subsequently be in state ```waitA```.
+Each state transition consists of three parts: the *original state*, a *list of action tags* in parenthesis, and the *following state*. For instance, in the transition ```init (readT) --> waitA;``` we have ```init``` as the original state, ```readT``` as the action tag, and ```waitA``` as the following state. The way to read this is that if the schedule is in state ```init``` and an action tagged with ```readT``` occurs, the schedule will subsequently be in state ```waitA```.
+
+If you imagine states ```init```, ```waitA``` and ```waitB``` as circles and action tags `readT`,`readF`,`copyA` and `copyB` as arrows, you can easily see FSM diagram right in the code, as it illustrated in the following drawing. 
+
+![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_02_FSM.png)
 
 The example above shows how we can make implementation simpler and more readable. But in fact, it complicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
 Let's review a simpler example to learn how we can avoid increasing complexity using *schedules*.
