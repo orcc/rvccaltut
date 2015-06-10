@@ -4,13 +4,13 @@ Before you start, you have to install all the tools needed for compiling and run
 Open RVC CAL Compiler (Orcc) is made for the Eclipse platform. So in order to use it you will need to install Java Runtime Environment and Eclipse IDE.
 
 #### Java Runtime Environment
-You can download and install the latest JRE release from [java.com](https://java.com/en/download/). ORCC requires version 1.6 of higher of JRE. 
-If choose to use *Eclipse IDE for Java Developers edition*, you will need instal Java Development Kit (JDK) as well, which you can download [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+ORCC requires version 1.6 of higher of JRE. You can download and install the latest JRE release from [java.com](https://java.com/en/download/).
+To use *Eclipse IDE for Java Developers edition*, you will need to instal Java Development Kit (JDK) as well, which you can download from the [Oracle website](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
 #### Eclipse
 ORCC is compatible with Eclipse versions 4.3 and higher
 
-You can download and install Eclipse IDE from https://www.eclipse.org/downloads/ (If unsure use Eclipse IDE for Java Developers edition).
+You can download and install Eclipse IDE from https://www.eclipse.org/downloads/ (We recomend to use Eclipse IDE for Java Developers edition).
 
 To install just extract the archive into a local directory.
 
