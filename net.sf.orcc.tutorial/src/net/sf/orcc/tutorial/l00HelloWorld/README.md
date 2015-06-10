@@ -1,5 +1,7 @@
 # Lesson 0. Hello World
 
+> Note: before you start, make sure that active perspective in your Eclipse is `Java EE`, otherwise the menus will differ slightly and you'll need to look for some menu items by yourself.
+
 ### Creating new project
 First you need to create new ORCC project. 
 
