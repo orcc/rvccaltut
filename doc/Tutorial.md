@@ -19,7 +19,7 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 4. [State variables](#lesson-4-state-variables). The memory (or *states*) of actors which can affect the consequent executions is introduced.
 5. [Schedules](#lesson-5-schedules). Schedules is a convenient way to implement finite state machines.
 6. [Priorities](#lesson-6-priorities). RCV CAL provides language constructions to give priorities to the actions.
-7. [Repeat clauses](#lesson-7-repeat-clauses). 
+7. [Repeat clause](#lesson-7-repeat-clause). 
 8. [Control flow](#lesson-8-control-flow). 
 
 
@@ -652,7 +652,7 @@ And finally we give higher priority to the group ```Both```.
 
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/06_01_Network.png)
 
-# Repeat Clause
+# Lesson 7. Repeat Clause
 
 During this lesson we will get back to *input patterns* and *output expressions*.
 
@@ -751,9 +751,7 @@ You can build networks for all these examples. And using actors `Source` and `Pr
 
 
 
-
-
-# Control Flow
+# Lesson 8. Control Flow
 
 In previous lessons we learned about dataflow abstractions in RVC CAL: 
 such as actors, actions and XDF networks. But language itself contains
