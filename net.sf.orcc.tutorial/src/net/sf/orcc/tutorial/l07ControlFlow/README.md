@@ -60,6 +60,33 @@ separated by commas.
 You can change values of variables using assignment statements within the body of action
 which is bounded by keywords `do ... end`. Each statement should be terminated with semicolon.
 
+You can find how to compose working example with assignment here:
+
+```
+package net.sf.orcc.tutorial.l07ControlFlow;
+
+actor Fibonacci () ==> int Out :
+	int fib[2] := [0,1];
+	int counter := 0;
+	
+	action  ==> Out: [fib[0]]
+	guard
+		counter < 20
+	var
+		int tmp
+	do
+		// Evaluate next Fibonacci number
+		tmp := fib[1];
+		fib[1] := fib[0] + fib[1];
+		fib[0] := tmp;
+		
+		// Increment counter
+		counter := counter + 1;
+	end
+
+end
+```
+
 
 #### If-statement
 
