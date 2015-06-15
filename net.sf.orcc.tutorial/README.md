@@ -19,7 +19,7 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 4. [State variables](./src/net/sf/orcc/tutorial/l04States). The memory (or *states*) of actors which can affect the consequent executions is introduced.
 5. [Schedules](./src/net/sf/orcc/tutorial/l05Schedules). Schedules is a convenient way to implement finite state machines.
 6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities). RCV CAL provides language constructions to give priorities to the actions.
-7. [Repeat clauses](./src/net/sf/orcc/tutorial/l07Repeat). 
+7. [Repeat clause](./src/net/sf/orcc/tutorial/l07Repeat). 
 8. [Control flow](./src/net/sf/orcc/tutorial/l08ControlFlow). 
 
 
