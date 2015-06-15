@@ -73,12 +73,16 @@ actor SplitRP () int In1 ==> int Out1, int Out2, int Out3 :
 	
 end
 ```
+
 Here we have input pattern `[a,b,c] repeat 8`. This means that action will consume three
 these tokens 8 times. So if we have on the input 
 
-```[1,2,3,4,5,6,7,8,9,...,24]```
+```
+[1,2,3,4,5,6,7,8,9,...,24]
+```
 
 then within the action we will have arrays 
+
 ```
 a[8] = [1,4,7,...,22]
 b[8] = [2,5,8,...,23]
@@ -89,7 +93,6 @@ The output expressions of the example just send all three arrays to three differ
 
 
 You can build networks for all these examples. And using actors `Source` and `Print` from `utils` package see how they behave.
-
 
 
 
