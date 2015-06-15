@@ -2,14 +2,14 @@ package net.sf.orcc.tutorial.l08ControlFlow;
 
 actor SatDotProduct (int level = 50) int In ==> int Out :
 
-	action In: [x] repeat 8 ==> Out: [sum]
+	action In: [x,y] repeat 8 ==> Out: [sum]
 	var
 		int i := 0,
 		int sum := 0
 	do
 		while i < 8
 		do
-			sum := sum + x[i]*x[i];
+			sum := sum + x[i]*y[i];
 			if sum > level
 			then 
 				sum := level;

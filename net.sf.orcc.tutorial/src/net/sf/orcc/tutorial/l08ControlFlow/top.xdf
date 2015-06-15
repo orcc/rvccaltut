@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="Fib">
+        <Class name="net.sf.orcc.tutorial.l08ControlFlow.Fibonacci"/>
+    </Instance>
+    <Instance id="Printer1">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+    </Instance>
+    <Connection dst="Printer1" dst-port="In" src="Fib" src-port="Out"/>
+</XDF>

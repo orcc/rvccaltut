@@ -2,13 +2,13 @@ package net.sf.orcc.tutorial.l08ControlFlow;
 
 actor DotProduct () int In ==> int Out :
 
-	action In: [x] repeat 8 ==> Out: [sum]
+	action In: [x,y] repeat 8 ==> Out: [sum]
 	var
 		int sum := 0
 	do
 		foreach int i in 0 .. 7
 		do
-			sum := sum + x[i]*x[i];
+			sum := sum + x[i]*y[i];
 		end
 	end 
 end
