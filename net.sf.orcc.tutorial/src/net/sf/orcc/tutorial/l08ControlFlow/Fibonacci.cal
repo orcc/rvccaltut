@@ -1,4 +1,4 @@
-package net.sf.orcc.tutorial.l07ControlFlow;
+package net.sf.orcc.tutorial.l08ControlFlow;
 
 actor Fibonacci () ==> int Out :
 	int fib[2] := [0,1];

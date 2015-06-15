@@ -1,4 +1,4 @@
-package net.sf.orcc.tutorial.l07ControlFlow;
+package net.sf.orcc.tutorial.l08ControlFlow;
 
 actor SatDotProduct (int level = 50) int In ==> int Out :
 

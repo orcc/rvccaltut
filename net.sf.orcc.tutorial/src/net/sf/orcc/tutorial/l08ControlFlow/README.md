@@ -63,7 +63,7 @@ which is bounded by keywords `do ... end`. Each statement should be terminated w
 You can find how to compose working example with assignments here:
 
 ```
-package net.sf.orcc.tutorial.l07ControlFlow;
+package net.sf.orcc.tutorial.l08ControlFlow;
 
 actor Fibonacci () ==> int Out :
 	int fib[2] := [0,1];
