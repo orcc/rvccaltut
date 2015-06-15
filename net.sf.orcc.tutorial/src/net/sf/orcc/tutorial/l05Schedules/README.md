@@ -36,7 +36,8 @@ describes our automaton. Basically, it is a textual representation of a finite s
 
 Each state transition consists of three parts: the *original state*, a *list of action tags* in parenthesis, and the *following state*. For instance, in the transition ```init (readT) --> waitA;``` we have ```init``` as the original state, ```readT``` as the action tag, and ```waitA``` as the following state. The way to read this is that if the schedule is in state ```init``` and an action tagged with ```readT``` occurs, the schedule will subsequently be in state ```waitA```.
 
-If you imagine states ```init```, ```waitA``` and ```waitB``` as circles and action tags `readT`,`readF`,`copyA` and `copyB` as arrows, you can easily see FSM diagram in that. 
+If you imagine states ```init```, ```waitA``` and ```waitB``` as circles and action tags `readT`,`readF`,`copyA` and `copyB` as arrows, you can easily see FSM diagram right in the code, as it illustrated in the following drawing. 
+
 ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_02_FSM.png)
 
 The example above shows how we can make implementation simpler and more readable. But in fact, it complicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
