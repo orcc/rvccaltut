@@ -1,0 +1,9 @@
+package net.sf.orcc.tutorial.l08Repeat;
+
+actor ReduceRP () int In1 ==> int Out :
+
+	action In1: [a] repeat 15 ==> Out: [a] repeat 8
+	guard a[0] mod 2 = 0
+	end
+	
+end

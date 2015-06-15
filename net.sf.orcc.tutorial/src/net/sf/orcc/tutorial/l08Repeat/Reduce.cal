@@ -1,0 +1,9 @@
+package net.sf.orcc.tutorial.l08Repeat;
+
+actor Reduce () int In1 ==> int Out :
+
+	action In1: [a1,a2,a3,a4,a5,a6,a7] ==> Out: [a1,a2]
+	guard a1 mod 2 = 0
+	end
+	
+end
