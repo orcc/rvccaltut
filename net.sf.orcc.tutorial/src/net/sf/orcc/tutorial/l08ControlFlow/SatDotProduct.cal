@@ -1,6 +1,6 @@
 package net.sf.orcc.tutorial.l08ControlFlow;
 
-actor SatDotProduct (int level = 50) int In ==> int Out :
+actor SatDotProduct (int level = 1024) int In ==> int Out :
 
 	action In: [x,y] repeat 8 ==> Out: [sum]
 	var

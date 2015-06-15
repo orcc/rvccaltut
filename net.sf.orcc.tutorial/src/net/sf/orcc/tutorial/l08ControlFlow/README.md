@@ -140,6 +140,30 @@ Syntax for the while-statement is the following
 ```
 
 
+```
+package net.sf.orcc.tutorial.l08ControlFlow;
+
+actor SatDotProduct (int level = 1024) int In ==> int Out :
+
+	action In: [x,y] repeat 8 ==> Out: [sum]
+	var
+		int i := 0,
+		int sum := 0
+	do
+		while i < 8
+		do
+			sum := sum + x[i]*y[i];
+			if sum > level
+			then 
+				sum := level;
+			end
+			i := i + 1;
+		end
+	end 
+end
+```
+
+
 #### Foreach-statement
 
 Foreach-statement has syntax like that:
@@ -150,5 +174,43 @@ Foreach-statement has syntax like that:
 		sum := sum + n + i;
 	end
 ```
+
+```
+package net.sf.orcc.tutorial.l08ControlFlow;
+
+actor DotProduct () int In ==> int Out :
+
+	action In: [x,y] repeat 8 ==> Out: [sum]
+	var
+		int sum := 0
+	do
+		foreach int i in 0 .. 7
+		do
+			sum := sum + x[i]*y[i];
+		end
+	end 
+end
+```
+
+```
+package net.sf.orcc.tutorial.l08ControlFlow;
+
+actor MatrixProduct () int In1, int In2 ==> int Out :
+
+	action In1: [x] repeat 8*8, In2: [y] repeat 8 ==> Out: [z] repeat 8 
+	var
+		int z[8]
+	do
+		foreach int i in 0 .. 7 do
+		z[i] := 0;
+			foreach int j in 0 .. 7
+			do
+				z[i] := z[i] + x[i*8+j]*y[j];
+			end
+		end
+	end 
+end
+```
+
 
 

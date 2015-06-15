@@ -5,6 +5,58 @@
     </Instance>
     <Instance id="Printer1">
         <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer 1"/>
+        </Parameter>
+    </Instance>
+    <Instance id="DotProd">
+        <Class name="net.sf.orcc.tutorial.l08ControlFlow.DotProduct"/>
+    </Instance>
+    <Instance id="Source1">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="count">
+            <Expr kind="Literal" literal-kind="Integer" value="64"/>
+        </Parameter>
+    </Instance>
+    <Instance id="MxProd">
+        <Class name="net.sf.orcc.tutorial.l08ControlFlow.MatrixProduct"/>
+    </Instance>
+    <Instance id="SatDotProd">
+        <Class name="net.sf.orcc.tutorial.l08ControlFlow.SatDotProduct"/>
+    </Instance>
+    <Instance id="Source2">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="count">
+            <Expr kind="Literal" literal-kind="Integer" value="64"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Source3">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+    </Instance>
+    <Instance id="Printer2">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer 2"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer3">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer 3"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer4">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer 4"/>
+        </Parameter>
     </Instance>
     <Connection dst="Printer1" dst-port="In" src="Fib" src-port="Out"/>
+    <Connection dst="DotProd" dst-port="In" src="Source1" src-port="Out"/>
+    <Connection dst="SatDotProd" dst-port="In" src="Source1" src-port="Out"/>
+    <Connection dst="MxProd" dst-port="In1" src="Source2" src-port="Out"/>
+    <Connection dst="MxProd" dst-port="In2" src="Source3" src-port="Out"/>
+    <Connection dst="Printer2" dst-port="In" src="DotProd" src-port="Out"/>
+    <Connection dst="Printer3" dst-port="In" src="SatDotProd" src-port="Out"/>
+    <Connection dst="Printer4" dst-port="In" src="MxProd" src-port="Out"/>
 </XDF>
