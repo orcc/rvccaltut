@@ -60,7 +60,7 @@ separated by commas.
 You can change values of variables using assignment statements within the body of action
 which is bounded by keywords `do ... end`. Each statement should be terminated with semicolon.
 
-You can find how to compose working example with assignment here:
+You can find how to compose working example with assignments here:
 
 ```
 package net.sf.orcc.tutorial.l07ControlFlow;
@@ -130,6 +130,8 @@ Operator | Description
 
 #### While-statement
 
+Syntax for the while-statement is the following
+
 ```
 	while n < 10
 	do
@@ -138,8 +140,9 @@ Operator | Description
 ```
 
 
-
 #### Foreach-statement
+
+Foreach-statement has syntax like that:
 
 ```
 	foreach int i in 0 .. 7
