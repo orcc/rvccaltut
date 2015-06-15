@@ -117,6 +117,7 @@ You can omit the `else` part.
 ```
 
 List of logical operators
+
 Operator | Description
 ---------|-------------
  =       | equal
