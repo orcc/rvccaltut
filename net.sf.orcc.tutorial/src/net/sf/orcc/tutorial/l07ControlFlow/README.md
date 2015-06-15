@@ -1,6 +1,6 @@
 # Control Flow
 
-In previous lessons we learned about dataflow abstractions in RVC CAL:
+In previous lessons we learned about dataflow abstractions in RVC CAL: 
 such as actors, actions and XDF networks. But language itself contains
 also elements of procedural paradigm.
 
@@ -11,6 +11,8 @@ mutable variables.
 
 Before we proceed with imperative elements of the language, it will
 be essential to describe data types used in RVC CAL.
+
+The following table shows all predefined data types used in RVC CAL.
 
 Data type                 | Example | Description
 --------------------------|---------|---------
@@ -47,9 +49,16 @@ initial value and change it during the action execution.
 	do
 		m := 10;
 		a := [0,1,2,3,4,5,6,7];
+		a[3] := m;
 	end
 ```
-Here you can see that we introduced a variable `m`, then changed its value and sent it to the output `Out`.
+Every action can contain local variables which should be introduced in the block
+precceded by the keyword `var` just after the action declaration. You can also initialize
+variables with values using operator `:=`. Definitions of different variables should be 
+separated by commas.
+
+You can change values of variables using assignment statements within the body of action
+which is bounded by keywords `do ... end`. Each statement should be terminated with semicolon.
 
 
 #### If-statement
