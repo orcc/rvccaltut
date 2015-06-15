@@ -1,0 +1,17 @@
+package net.sf.orcc.tutorial.l07ControlFlow;
+
+actor MatrixProduct () int In1, int In2 ==> int Out :
+
+	action In1: [x] repeat 8*8, In2: [y] repeat 8 ==> Out: [z] repeat 8 
+	var
+		int z[8]
+	do
+		foreach int i in 0 .. 7 do
+		z[i] := 0;
+			foreach int j in 0 .. 7
+			do
+				z[i] := z[i] + x[i*8+j]*y[j];
+			end
+		end
+	end 
+end

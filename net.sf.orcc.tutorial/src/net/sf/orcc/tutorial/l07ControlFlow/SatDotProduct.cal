@@ -1,0 +1,20 @@
+package net.sf.orcc.tutorial.l07ControlFlow;
+
+actor SatDotProduct (int level = 50) int In ==> int Out :
+
+	action In: [x] repeat 8 ==> Out: [sum]
+	var
+		int i := 0,
+		int sum := 0
+	do
+		while i < 8
+		do
+			sum := sum + x[i]*x[i];
+			if sum > level
+			then 
+				sum := level;
+			end
+			i := i + 1;
+		end
+	end 
+end

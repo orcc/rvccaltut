@@ -1,0 +1,14 @@
+package net.sf.orcc.tutorial.l07ControlFlow;
+
+actor DotProduct () int In ==> int Out :
+
+	action In: [x] repeat 8 ==> Out: [sum]
+	var
+		int sum := 0
+	do
+		foreach int i in 0 .. 7
+		do
+			sum := sum + x[i]*x[i];
+		end
+	end 
+end
