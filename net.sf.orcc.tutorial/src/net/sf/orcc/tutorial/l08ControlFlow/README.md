@@ -139,6 +139,8 @@ Syntax for the while-statement is the following
 	end
 ```
 
+And the following example illustrates how we can use while- and if-statements
+in actors:
 
 ```
 package net.sf.orcc.tutorial.l08ControlFlow;
@@ -162,6 +164,9 @@ actor SatDotProduct (int level = 1024) int In ==> int Out :
 	end 
 end
 ```
+Actor `SatDotProduct` computes saturated dot-product of two vectors.
+Note that here we are using *repeat clause* in input pattern to read two
+arrays of tokens as it was explained in previous lesson.
 
 
 #### Foreach-statement
@@ -174,6 +179,9 @@ Foreach-statement has syntax like that:
 		sum := sum + n + i;
 	end
 ```
+
+
+Next example shows how we can calculate dot-product using foreach-statement in RVC CAL.
 
 ```
 package net.sf.orcc.tutorial.l08ControlFlow;
@@ -191,6 +199,8 @@ actor DotProduct () int In ==> int Out :
 	end 
 end
 ```
+
+And the last example shows how we can use nested foreach-statements:
 
 ```
 package net.sf.orcc.tutorial.l08ControlFlow;
@@ -211,6 +221,9 @@ actor MatrixProduct () int In1, int In2 ==> int Out :
 	end 
 end
 ```
+
+Here we use *repeat clause* in output expression in order to send an array of tokens
+to the output.
 
 
 
