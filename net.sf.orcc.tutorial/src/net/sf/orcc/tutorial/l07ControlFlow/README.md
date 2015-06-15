@@ -42,7 +42,7 @@ First you can define a mutable variable within an action, assign it with
 initial value and change it during the action execution.
 
 ```
-	action  ==> Out: [m]
+	action  ==> Out: [m,a[0]]
 	var
 		int m := 0,
 		int a[8]
@@ -52,8 +52,8 @@ initial value and change it during the action execution.
 		a[3] := m;
 	end
 ```
-Every action can contain local variables which should be introduced in the block
-precceded by the keyword `var` just after the action declaration. You can also initialize
+Every action can contains local variables which should be introduced in the block
+preceded by the keyword `var` just after the action declaration. You can also initialize
 variables with values using operator `:=`. Definitions of different variables should be 
 separated by commas.
 

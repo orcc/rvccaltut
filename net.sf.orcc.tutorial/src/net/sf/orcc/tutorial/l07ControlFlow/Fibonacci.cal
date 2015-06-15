@@ -1,0 +1,19 @@
+package net.sf.orcc.tutorial.l07ControlFlow;
+
+actor Fibonacci () ==> int Out :
+	int fib[2] := [1,1];
+	int counter := 0;
+	
+	action  ==> Out: [fib[0]]
+	guard
+		counter < 20
+	var
+		int tmp
+	do
+		tmp := fib[1];
+		fib[1] := fib[0] + fib[1];
+		fib[0] := tmp;
+		counter := counter + 1;
+	end
+
+end
