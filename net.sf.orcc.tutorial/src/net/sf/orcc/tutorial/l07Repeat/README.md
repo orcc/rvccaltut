@@ -56,6 +56,7 @@ As in example above, if we add *repeat clause*, our defined output token *won't 
 n times. But we will sent first n elements of array `a[15]` to the output.
 
 
+Sometimes using *repeat clause* could be tricky. The following example shows one of these cases: 
 
 ```
 package net.sf.orcc.tutorial.l07Repeat;
@@ -72,6 +73,19 @@ actor SplitRP () int In1 ==> int Out1, int Out2, int Out3 :
 	
 end
 ```
+Here we have input pattern `[a,b,c] repeat 8`. This means that action will consume three
+these tokens 8 times. So if we have on the input 
+
+```[1,2,3,4,5,6,7,8,9,...,24]```
+
+then within the action we will have arrays 
+```
+a[8] = [1,4,7,...,22]
+b[8] = [2,5,8,...,23]
+c[8] = [3,6,8,...,24]
+``` 
+
+The output expressions of the example just send all three arrays to three different outputs.
 
 
 You can build networks for all these examples. And using actors `Source` and `Print` from `utils` package see how they behave.
