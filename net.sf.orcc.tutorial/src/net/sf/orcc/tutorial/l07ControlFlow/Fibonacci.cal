@@ -1,7 +1,7 @@
 package net.sf.orcc.tutorial.l07ControlFlow;
 
 actor Fibonacci () ==> int Out :
-	int fib[2] := [1,1];
+	int fib[2] := [0,1];
 	int counter := 0;
 	
 	action  ==> Out: [fib[0]]
@@ -10,9 +10,12 @@ actor Fibonacci () ==> int Out :
 	var
 		int tmp
 	do
+		// Evaluate next Fibonacci number
 		tmp := fib[1];
 		fib[1] := fib[0] + fib[1];
 		fib[0] := tmp;
+		
+		// Increment counter
 		counter := counter + 1;
 	end
 

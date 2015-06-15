@@ -52,7 +52,7 @@ initial value and change it during the action execution.
 		a[3] := m;
 	end
 ```
-Every action can contains local variables which should be introduced in the block
+Every action can contain local variables which should be introduced in the block
 preceded by the keyword `var` just after the action declaration. You can also initialize
 variables with values using operator `:=`. Definitions of different variables should be 
 separated by commas.
