@@ -1,4 +1,4 @@
-# Repeat Clause
+# Lesson 7. Repeat Clause
 
 During this lesson we will get back to *input patterns* and *output expressions*.
 
@@ -93,8 +93,6 @@ The output expressions of the example just send all three arrays to three differ
 
 
 You can build networks for all these examples. And using actors `Source` and `Print` from `utils` package see how they behave.
-
-
 
 
 
