@@ -86,18 +86,28 @@ actor Fibonacci () ==> int Out :
 
 end
 ```
+Actor in this example produce a sequence of Fibonacci numbers.
 
+
+The following sections describe control flow constructions of RVC CAL.
 
 #### If-statement
 
+First control flow statement we will learn is an if-statement. Almost every language has this kind
+of constructions so you probably are familiar with it.
+
+If-statement in RVC CAL has the following syntax
+
 ```
-	if m + n = 0
+	if m > 0
 	then
 		m := m + n;
 	else
 		n := m + n;
 	end
 ```
+
+You can omit the `else` part.
 
 ```
 	if m != 0
@@ -106,6 +116,15 @@ end
 	end
 ```
 
+List of logical operators
+Operator | Description
+---------|-------------
+ =       | equal
+ !=      | not equal
+ >       | greater then
+ <       | less then
+ >=      | greater or equal
+ <=      | less or equal
 
 
 #### While-statement
