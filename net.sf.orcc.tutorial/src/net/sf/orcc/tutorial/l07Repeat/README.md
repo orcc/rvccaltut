@@ -3,7 +3,7 @@
 During this lesson we will get back to *input patterns* and *output expressions*.
 
 In the beginning of this tutorial we learned that *input pattern* of an action has
-tow main functions:
+two main functions:
 1. Input pattern defined the requirements for action to fire based on tokens we have
 on the input
 2. Input pattern declares variables which will be used in the body of an action.
@@ -45,6 +45,40 @@ end
 
 ```
 Using keyword `repeat` we can tell the action to consume defined pattern multiple times.
-Here we are reading 15 tokens if the first one is even. 
+Here we are reading 15 tokens if the first one is even.
+
+>Note: You can refer to the consumed token `a` within the action's body as to an array: e.g. `a[2]`. So
+actually `In1: [a] repeat 15` here defines an array `int a[15]` and initialize it with 15 input tokens of type `int`.
+
+Similar construction can be used with output expression. Recall the first lesson: output expressions
+contain a list of expressions to compute the values of output tokens.
+As in example above, if we add *repeat clause*, our defined output token *won't be* just reproduced
+n times. But we will sent first n elements of array `a[15]` to the output.
+
+
+
+```
+package net.sf.orcc.tutorial.l07Repeat;
+
+actor SplitRP () int In1 ==> int Out1, int Out2, int Out3 :
+
+	action 
+		In1: [a,b,c] repeat 8
+		==> 
+		Out1: [a] repeat 8,
+		Out2: [b] repeat 8,
+		Out3: [c] repeat 8
+	end
+	
+end
+```
+
+
+You can build networks for all these examples. And using actors `Source` and `Print` from `utils` package see how they behave.
+
+
+
+
+
 
 

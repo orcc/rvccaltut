@@ -1,9 +1,9 @@
-package net.sf.orcc.tutorial.l08Repeat;
+package net.sf.orcc.tutorial.l07Repeat;
 
 actor SplitRP () int In1 ==> int Out1, int Out2, int Out3 :
 
 	action 
-		In1: [a,b,c] repeat 24
+		In1: [a,b,c] repeat 8
 		==> 
 		Out1: [a] repeat 8,
 		Out2: [b] repeat 8,

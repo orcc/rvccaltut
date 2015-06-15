@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XDF name="top">
+    <Instance id="Source1">
+        <Class name="net.sf.orcc.tutorial.utils.Source"/>
+        <Parameter name="count">
+            <Expr kind="Literal" literal-kind="Integer" value="48"/>
+        </Parameter>
+    </Instance>
+    <Instance id="SplitRP">
+        <Class name="net.sf.orcc.tutorial.l07Repeat.SplitRP"/>
+    </Instance>
+    <Instance id="Printer1">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer 1"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer2">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer 2"/>
+        </Parameter>
+    </Instance>
+    <Instance id="Printer3">
+        <Class name="net.sf.orcc.tutorial.utils.Printer"/>
+        <Parameter name="name">
+            <Expr kind="Literal" literal-kind="String" value="Printer 3"/>
+        </Parameter>
+    </Instance>
+    <Connection dst="SplitRP" dst-port="In1" src="Source1" src-port="Out"/>
+    <Connection dst="Printer1" dst-port="In" src="SplitRP" src-port="Out1"/>
+    <Connection dst="Printer2" dst-port="In" src="SplitRP" src-port="Out2"/>
+    <Connection dst="Printer3" dst-port="In" src="SplitRP" src-port="Out3"/>
+</XDF>
