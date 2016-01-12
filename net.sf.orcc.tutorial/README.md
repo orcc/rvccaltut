@@ -11,15 +11,14 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 
 [Installing ORCC Tools](./Installing_ORCC.md). Here you will find where to get and how to install the latest ORCC.
 
-[Hello world](./src/net/sf/orcc/tutorial/l00HelloWorld). This lesson shows how to compile and run an application.
-
+0. [Hello world](./src/net/sf/orcc/tutorial/l00HelloWorld). This lesson shows how to compile and run an application.
 1. [Simple actor](./src/net/sf/orcc/tutorial/l01SimpleActor). The simplest language constructions which follow the dataflow model are introduced.
 2. [Non-determinism](./src/net/sf/orcc/tutorial/l02Nondeterminism). Non-deterministic nature of unconstrained multiple actions of the same actor is explained.
 3. [Guarded actions](./src/net/sf/orcc/tutorial/l03GuardedActions). The way to restrict actions executions with conditions is introduced. 
 4. [State variables](./src/net/sf/orcc/tutorial/l04States). The memory (or *states*) of actors which can affect the consequent executions is introduced.
 5. [Schedules](./src/net/sf/orcc/tutorial/l05Schedules). Schedules is a convenient way to implement finite state machines.
-6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities). RCV CAL provides language constructions to give priorities to the actions.
-7. [Repeat clause](./src/net/sf/orcc/tutorial/l07Repeat). 
-8. [Control flow](./src/net/sf/orcc/tutorial/l08ControlFlow). 
+6. [Priorities](./src/net/sf/orcc/tutorial/l06Priorities). RVC CAL provides language constructions to give priorities to the actions.
+7. [Repeat clause](./src/net/sf/orcc/tutorial/l07Repeat). Special extensions to manage input/output
+8. [Control flow](./src/net/sf/orcc/tutorial/l08ControlFlow). Imperative constructions in RVC CAL
 
 
