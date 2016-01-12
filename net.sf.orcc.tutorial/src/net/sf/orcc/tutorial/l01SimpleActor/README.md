@@ -71,7 +71,7 @@ After you add instances of actors: ```ID```, ```Source``` and ```Printer```. Con
 
 Now you can run example as was described in the previous lesson and see the result in the console.
 
-![image](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_01_ID_actor.png)
+![image](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_01_ID_actor.png)
 
 #### Other simple actors
 
@@ -127,11 +127,11 @@ You can notice that here we did not left the actor's parameters field empty. ```
 
 You can modify the parameters after you added an instance of actor to the XDF network. To do that you have to right-click on the instance rectangle and then chose *Show properties* item.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_03_Actorparameters.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_03_Actorparameters.png)
 
 In the properties pane click on the *Arguments* on the left. You will see the list of arguments. Click on *Add* button and specify *Name* ```k``` and *Value* ```7```.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_04_Actor_parameners.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_04_Actor_parameners.png)
 
 Now when you run the network this particular instance of the actor will multiply the input token by 7.
 
@@ -143,6 +143,6 @@ After you finish all the examples above you can build a network similar to the s
 
 >Remember if you don't specify parameter `name` of actor `Printer` (as it was jasu described in the previous paragraph), you won't know from the console output wich atctor prints what. And since this paramener is a string, it should be surrounded by quotation marks, e.g. `"Printer1"`
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_02_Simple_actors.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_02_Simple_actors.png)
 
 

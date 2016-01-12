@@ -29,5 +29,5 @@ Here we have one input and two outputs. Two actions always have condition to fir
 
 You can try to build the network similar to the following one to simulate the non-deterministic behaviour. Whilst, because of deterministic nature of simulator algorithms results will not look random.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/02_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/02_01_Network.png)
 

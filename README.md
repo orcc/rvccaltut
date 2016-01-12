@@ -6,4 +6,4 @@ All the examples of this tutorial are written for and tested with ORCC tools.
 
 [Open RVC CAL Compiler (ORCC)](http://orcc.sourceforge.net/) is an open-source Integrated Development Environment based on Eclipse and dedicated to dataflow programming. The primary purpose of Orcc is to provide developers with a compiler infrastructure to allow software/hardware code to be generated from dataflow descriptions.
 
-[Read the tutorial](https://github.com/eugeneu/rvccaltut/tree/master/net.sf.orcc.tutorial)
+[Read the tutorial](https://github.com/orcc/rvccaltut/tree/master/net.sf.orcc.tutorial)

@@ -45,5 +45,5 @@ First you have to pay attention to the action tagging. We can group actions labe
 And finally we give higher priority to the group ```Both```.
 
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/06_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/06_01_Network.png)
 

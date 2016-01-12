@@ -38,7 +38,7 @@ Each state transition consists of three parts: the *original state*, a *list of 
 
 If you imagine states ```init```, ```waitA``` and ```waitB``` as circles and action tags `readT`,`readF`,`copyA` and `copyB` as arrows, you can easily see FSM diagram right in the code, as it illustrated in the following drawing. 
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_02_FSM.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/05_02_FSM.png)
 
 The example above shows how we can make implementation simpler and more readable. But in fact, it complicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
 Let's review a simpler example to learn how we can avoid increasing complexity using *schedules*.
@@ -86,4 +86,4 @@ end
 Here you can see two actions ```A```, ```B``` and two states ```S1```, ```S2```, which is the same as in the original actor.
 
 You can implement a network according to the diagram:
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/05_01_Network.png)

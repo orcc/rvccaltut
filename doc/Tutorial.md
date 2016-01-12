@@ -47,9 +47,9 @@ To install Orcc, you can use the Eclipse Software Update Manager. To do that,
 1. Go to Help > Install New Software...
 2. Click Add... to add an update site
 3. Set its name (e.g. Orcc) and its URL to http://orcc.sourceforge.net/eclipse
-![Add repository](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/001_Eclipse_Add_repository.png)
+![Add repository](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/001_Eclipse_Add_repository.png)
 4. Once this done, select Open RVC-CAL Compiler or Orcc.
-![Installing Plug-in](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/002_Eclipse_Install_plugin.png)
+![Installing Plug-in](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/002_Eclipse_Install_plugin.png)
 5. Click Next, check and accept the licenses and then click Finish.
 6. At some point Eclipse will ask you if you really want to install an unverified feature, just accept and restart Eclipse.
 
@@ -64,11 +64,11 @@ First you need to create new ORCC project.
 
 In the menu "File > New > Other..." chose "ORCC > Orcc Project"
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_01_Create_new_orcc_project.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_01_Create_new_orcc_project.png)
 
 Specify the name of the project and click finish.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_02_Create_new_orcc_project.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_02_Create_new_orcc_project.png)
 
 You will see that default src directory has been added to the created project.
 
@@ -76,13 +76,13 @@ You will see that default src directory has been added to the created project.
 
 Right Click on the src folder in Project Explorer pane. New > Package
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_03_Create_new_package.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_03_Create_new_package.png)
 
 ### Creating Actor
 In Project explorer pane, select package you just created. Then click menu "File > New > File..."
 Specify the name and the extension .cal
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_04_Create_new_actor.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_04_Create_new_actor.png)
 
 After file was created, add the following code there and save it. Eclipse will automatically compile the file.
 
@@ -107,30 +107,30 @@ RVC CAL is a language which implements the Dataflow paradigm. This means that in
 
 To build a network you need to create new XDF file. Go to  File > New > Other then select Orcc > XDF Network.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_05_Create_new_XDF.png) ![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_06_Create_new_XDF.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_05_Create_new_XDF.png) ![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_06_Create_new_XDF.png)
 
 After empty XDF was created you have to add an instance of an actor.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_07_Create_new_XDF.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_07_Create_new_XDF.png)
 
 Click on Objects > Instance in the palette, and then click on XDF file area to add an Instance to your network.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_08_Create_instance.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_08_Create_instance.png)
 
 Name your instance "Hello"
 
 Now you have to link this instance to the actor created before. Right-click on the instance and select Set/Update Refinement.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_09_Link_actor.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_09_Link_actor.png)
 
 Then, select the "HelloWorld" actor in the newly opened box.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_10_Link_actor.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_10_Link_actor.png)
 
 
 After your validation, "Hello" should be displayed in blue (meaning that your instance is assigned to an actor).
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_11_Network_ready.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_11_Network_ready.png)
 
 As you can see our instance has an input port, even thought we did not specify it. This is normal.
 
@@ -141,23 +141,23 @@ Don't forget to save all the files. Compilation will be done automatically.
 
 Right-click on the XDF file and (Run As > Orcc simulation).
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_12_Run_simulation.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_12_Run_simulation.png)
 
 In the "Select simulator" window, click OK.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_13_Run_simulation.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_13_Run_simulation.png)
 
 In the "Select input stimulus" window, select a random file (it will not be used by our example).
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_14_Run_simulation.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_14_Run_simulation.png)
 
 In the Run configuration wizard just click on Run.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_15_Run_simulation.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_15_Run_simulation.png)
 
 You should see that in Eclipse's console:
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/00_16_Run_simulation.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/00_16_Run_simulation.png)
 
 
 
@@ -234,7 +234,7 @@ After you add instances of actors: ```ID```, ```Source``` and ```Printer```. Con
 
 Now you can run example as was described in the previous lesson and see the result in the console.
 
-![image](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_01_ID_actor.png)
+![image](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_01_ID_actor.png)
 
 #### Other simple actors
 
@@ -290,11 +290,11 @@ You can notice that here we did not left the actor's parameters field empty. ```
 
 You can modify the parameters after you added an instance of actor to the XDF network. To do that you have to right-click on the instance rectangle and then chose *Show properties* item.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_03_Actorparameters.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_03_Actorparameters.png)
 
 In the properties pane click on the *Arguments* on the left. You will see the list of arguments. Click on *Add* button and specify *Name* ```k``` and *Value* ```7```.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_04_Actor_parameners.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_04_Actor_parameners.png)
 
 Now when you run the network this particular instance of the actor will multiply the input token by 7.
 
@@ -306,7 +306,7 @@ After you finish all the examples above you can build a network similar to the s
 
 >Remember if you don't specify parameter `name` of actor `Printer` (as it was jasu described in the previous paragraph), you won't know from the console output wich atctor prints what. And since this paramener is a string, it should be surrounded by quotation marks, e.g. `"Printer1"`
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/01_02_Simple_actors.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_02_Simple_actors.png)
 
 
 # Lesson 2. Non-determinism
@@ -340,7 +340,7 @@ Here we have one input and two outputs. Two actions always have condition to fir
 
 You can try to build the network similar to the following one to simulate the non-deterministic behaviour. Whilst, because of deterministic nature of simulator algorithms results will not look random.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/02_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/02_01_Network.png)
 
 # Lesson 3. Guarded actions
 
@@ -423,7 +423,7 @@ The code above is similar to the ```NDMerge``` from the previous lesson, besides
 
 Now you can try to build network like the following. For the boolean input of the actor from the last example you will need special source generator BoolGen. You can download it from Github repository [here](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils/BoolGen.cal). ```BoolGen``` actor generates an infinite sequence of ```[true, false, true, false,...]```.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/03_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/03_01_Network.png)
 
 # Lesson 4. State variables
 
@@ -512,7 +512,7 @@ Here we have to actions. One of them adds input token to the state variable ```s
 
 You can build the network similar to the following diagram to experiment with these actors.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/04_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/04_01_Network.png)
 
 # Lesson 5. Schedules
 
@@ -554,7 +554,7 @@ Each state transition consists of three parts: the *original state*, a *list of 
 
 If you imagine states ```init```, ```waitA``` and ```waitB``` as circles and action tags `readT`,`readF`,`copyA` and `copyB` as arrows, you can easily see FSM diagram right in the code, as it illustrated in the following drawing. 
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_02_FSM.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/05_02_FSM.png)
 
 The example above shows how we can make implementation simpler and more readable. But in fact, it complicates the computation: in the original ```IterSelect``` actor we had only three actions and here we have them four.
 Let's review a simpler example to learn how we can avoid increasing complexity using *schedules*.
@@ -602,7 +602,7 @@ end
 Here you can see two actions ```A```, ```B``` and two states ```S1```, ```S2```, which is the same as in the original actor.
 
 You can implement a network according to the diagram:
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/05_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/05_01_Network.png)
 # Lesson 6. Priorities
 
 In the previous lessons we learnt about *guards*, *states* and *schedules*. But there is one more way to manage action firings in RVC CAL.
@@ -650,7 +650,7 @@ First you have to pay attention to the action tagging. We can group actions labe
 And finally we give higher priority to the group ```Both```.
 
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/06_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/06_01_Network.png)
 
 # Lesson 7. Repeat Clause
 

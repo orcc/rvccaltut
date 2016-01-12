@@ -85,5 +85,5 @@ Here we have to actions. One of them adds input token to the state variable ```s
 
 You can build the network similar to the following diagram to experiment with these actors.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/04_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/04_01_Network.png)
 

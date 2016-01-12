@@ -79,5 +79,5 @@ The code above is similar to the ```NDMerge``` from the previous lesson, besides
 
 Now you can try to build network like the following. For the boolean input of the actor from the last example you will need special source generator BoolGen. You can download it from Github repository [here](/net.sf.orcc.tutorial/src/net/sf/orcc/tutorial/utils/BoolGen.cal). ```BoolGen``` actor generates an infinite sequence of ```[true, false, true, false,...]```.
 
-![](https://raw.githubusercontent.com/eugeneu/rvccaltut/master/images/03_01_Network.png)
+![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/03_01_Network.png)
 
