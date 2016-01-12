@@ -141,7 +141,7 @@ Now when you run the network this particular instance of the actor will multiply
 
 After you finish all the examples above you can build a network similar to the shown on the following picture.
 
->Remember if you don't specify parameter `name` of actor `Printer` (as it was jasu described in the previous paragraph), you won't know from the console output wich atctor prints what. And since this paramener is a string, it should be surrounded by quotation marks, e.g. `"Printer1"`
+>Remember if you don't specify parameter `name` of actor `Printer` (as it was just described in the previous paragraph), you won't know from the console output wich atctor prints what. And since this paramener is a string, it should be surrounded by quotation marks, e.g. `"Printer1"`
 
 ![](https://raw.githubusercontent.com/orcc/rvccaltut/master/images/01_02_Simple_actors.png)
 
